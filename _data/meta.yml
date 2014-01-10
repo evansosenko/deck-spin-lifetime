@@ -1,9 +1,9 @@
 # This meta data should be filled out.
-title: Deck title
-description: Deck description
+title: Effect of contacts on spin lifetime measurements in graphene
+description: Effect of contacts on spin lifetime measurements in graphene
 keywords: [deck.js, talk]
 locale: en_US
-site_name: Site name
+site_name: evansosenko.com
 
 # This meta data is optional.
 # determiner: null
@@ -12,7 +12,7 @@ site_name: Site name
 # video: http://razor-x.github.io/jekyll-and-deck.js/talk.mpg
 # type: website
 #
-# twitter:
-#   card: summary
-#   site: "@username"
-#   creator: "@username"
+twitter:
+  card: summary
+  site: "@evansosenko"
+  creator: "@evansosenko"

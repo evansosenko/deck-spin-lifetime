@@ -1,6 +1,6 @@
 # Jekyll options.
-domain: http://razor-x.github.io/jekyll-and-deck.js
-baseurl: http://razor-x.github.io/jekyll-and-deck.js
+domain: http://io.evansosenko.com/deck-spin-lifetime
+baseurl: http://io.evansosenko.com/deck-spin-lifetime
 markdown: redcarpet
 pygments: true
 exclude:
@@ -22,7 +22,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: http://razor-x.github.io/jekyll-and-deck.js/assets/
+  baseurl: http://io.evansosenko.com/deck-spin-lifetime/assets/
   sources:
     - _assets/images
     - _assets/javascripts
@@ -37,7 +37,7 @@ assets:
 slide_tag: section
 
 # Set to true to load MathJax.
-mathjax: false
+mathjax: true
 
 # Use a cdn to load some libraries.
 cdn_enabled: true
@@ -56,16 +56,16 @@ cdn:
 # piwik: https://example.com/piwik/
 
 # Uncomment below to configure social media.
-# social:
-#   facebook:
-#     enabled: true
-#   google:
-#     enabled: true
-#     gcfg:
-#       lang: en-US
-#       parsetags: onload
-#   twitter:
-#     enabled: true
+social:
+  facebook:
+    enabled: true
+  google:
+    enabled: true
+    gcfg:
+      lang: en-US
+      parsetags: onload
+  twitter:
+    enabled: true
 
 # Uncomment below to enable deploy.
 # :deploy:

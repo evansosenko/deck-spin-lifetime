@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Deck Title
+title: Effect of contacts on spin lifetime measurements in graphene
 ---
 
 {% slide header %}
