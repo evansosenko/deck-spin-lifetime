@@ -5,10 +5,10 @@
 See this and other talks at
 [evansosenko.com](http://evansosenko.com/).
 
-Source for [my deck](http://io.evansosenko.com/deck-spin-lifetime) running on Jekyll and deck.js.
+Source for [my deck](http://io.evansosenko.com/deck-spin-lifetime/) running on Jekyll and deck.js.
 
 The rest of this README, except for the License,
-is just cloned from [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js).
+is just cloned from [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js/).
 
 Demo at [io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyll-and-deck.js/).
 
