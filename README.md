@@ -1,11 +1,11 @@
-# Jekyll & deck.js
+# Effect of contacts on spin lifetime measurements in graphene
 
-[![Dependency Status](https://gemnasium.com/razor-x/jekyll-and-deck.js.png)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
-[![Build Status](https://travis-ci.org/razor-x/jekyll-and-deck.js.png?branch=demo)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/razor-x/jekyll-and-deck.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+**by Evan Sosenko**
 
-Source for your deck running on Jekyll and deck.js.
-Just clone and deck.
+Source for my deck running on Jekyll and deck.js.
+
+The rest of this README, except for the License,
+is just cloned from [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js).
 
 Demo at [io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyll-and-deck.js/).
 
@@ -149,7 +149,9 @@ JavaScript library versions need to be updated in `bower.json` and `_config.yml`
 
 ## License
 
-This code is licensed under the MIT license.
+This code is Copyright 2014 Evan Sosenko,
+This deck is built with [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js)
+which is licensed under the MIT license.
 
 ## Warranty
 
