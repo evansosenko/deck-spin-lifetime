@@ -5,7 +5,7 @@
 $background-color: $holo-color-light
 
 $title-slide-side-margin: 50px
-$title-slide-bottom-margin: 10px
+$title-slide-bottom-margin: 30px
 
 $qrcode-size: 150px
 $qrcode-container-size: $qrcode-size - 10px
@@ -44,14 +44,35 @@ article.deck-container
     font-size: 2em
     color: $holo-color-dark
 
-    .author
-      display: block
-      margin-top: 1em
-      font-size: 0.6em
-      color: $holo-color-green
-
     @media #{$large}
       font-size: 3.5em
+
+  ul.authors
+    position: absolute
+    top: 50%
+    width: 100%
+    margin: 0
+    text-align: center
+    list-style-type: none
+
+    li
+      padding: 0
+
+    a
+      color: $holo-color-green
+      &:hover
+        color: $holo-color-red
+
+    .author
+      font-size: 2.5em
+      font-weight: bold
+
+    .connector
+      font-size: 0.8em
+
+    .coauthor
+      font-size: 1.5em
+      font-weight: 300
 
   .ucr_logo
     $scale: 0.5
@@ -98,9 +119,6 @@ article.deck-container
       bottom: $title-slide-bottom-margin
       left: $title-slide-side-margin + $qrcode-container-size + 20px
       font-size: 3em
-      text-decoration: none
-      &:hover
-        color: $holo-color-red
 
 #deck-loading_screen h1
   font-family: "Helvetica", Arial, sans-serif

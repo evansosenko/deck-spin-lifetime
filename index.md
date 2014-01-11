@@ -1,15 +1,26 @@
 ---
 layout: default
 title: Effect of contacts on spin lifetime measurements in graphene
+author: Evan Sosenko
 short_url: goo.gl/rc8q83
+ucr_url: http://www.physics.ucr.edu/
+coauthors: [ Vivek Aji ]
 ---
 
 {% slide header %}
 
 <h1>{{ page.title }}</h1>
+<ul class="authors">
+  <li class="author"><a href="http://{{ site.data.meta.site_name }}">{{ page.author }}</a>
+  </li>
+  <li class"connector">with</li>
+{% for coauthor in page.coauthors %}
+  <li class="author coauthor">{{ coauthor }}</li>
+{% endfor %}
+</ul>
 <div class="qrcode"></div>
 <a class="short_url" href="https://{{ page.short_url }}">{{ page.short_url }}</a>
-<div class="ucr_logo"></div>
+<a class="ucr_logo" href="{{ page.ucr_url }}"></a>
 
 {% endslide %}{% slide %}
 
