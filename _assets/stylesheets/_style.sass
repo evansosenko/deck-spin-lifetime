@@ -1,0 +1,111 @@
+//
+// Variables
+//
+
+$background-color: $holo-color-light
+
+$title-slide-side-margin: 50px
+$title-slide-bottom-margin: 10px
+
+$qrcode-size: 150px
+$qrcode-container-size: $qrcode-size - 10px
+
+$ucr_logo: 'ucr_logo_cmyk.svg'
+$ucr_logo-height: 100px
+$ucr_logo-width: 5.2 * $ucr_logo-height
+
+//
+// Media Queries
+//
+
+// 1025px, 1440px
+$large: 'only screen and (min-width: 64.063em)'
+
+//
+// Slide Styles
+//
+
+body
+  background-color: $background-color
+
+
+
+article.deck-container
+  font-family: $font-family-base
+  background-color: $background-color
+
+  h1, h2, h3, h4, h5, h6
+    font-family: $font-roboto
+    font-weight: 300
+    color: darken($holo-color-green, 10%)
+
+  h1
+    top: 30%
+    font-size: 2em
+    color: $holo-color-dark
+
+    .author
+      display: block
+      margin-top: 1em
+      font-size: 0.6em
+      color: $holo-color-green
+
+    @media #{$large}
+      font-size: 3.5em
+
+  .ucr_logo
+    $scale: 0.5
+    position: absolute
+    bottom: 5px
+    width: 100%
+    height: $scale * $ucr_logo-height
+    background-image: image-url($ucr_logo)
+    background-size: $scale * $ucr_logo-width $scale * $ucr_logo-height
+    background-position: center
+    background-repeat: no-repeat
+
+    @media #{$large}
+      height: $ucr_logo-height
+      width: $ucr_logo-width
+      bottom: $title-slide-bottom-margin
+      right: $title-slide-side-margin
+      background-size: $ucr_logo-width $ucr_logo-height
+
+  .qrcode
+    display: none
+    position: absolute
+    +retina-image('rc8q83.qr', $qrcode-size $qrcode-size, $asset-pipeline: true)
+    background-size: $qrcode-size $qrcode-size
+    background-position: center
+    background-repeat: no-repeat
+
+    @media #{$large}
+      display: block
+      bottom: $title-slide-bottom-margin
+      left: $title-slide-side-margin
+      width: $qrcode-container-size
+      height: $qrcode-container-size
+      border-radius: em(10)
+      box-shadow: 0 0 5px $holo-color-blue
+
+
+  .short_url
+    display: none
+    position: absolute
+
+    @media #{$large}
+      display: inline-block
+      bottom: $title-slide-bottom-margin
+      left: $title-slide-side-margin + $qrcode-container-size + 20px
+      font-size: 3em
+      text-decoration: none
+      &:hover
+        color: $holo-color-red
+
+#deck-loading_screen h1
+  font-family: "Helvetica", Arial, sans-serif
+  font-weight: 300
+
+  > div.spinner
+    margin-right: em(30)
+    font-size: 0.2em

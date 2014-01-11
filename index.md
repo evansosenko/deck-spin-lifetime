@@ -2,16 +2,14 @@
 layout: default
 title: Effect of contacts on spin lifetime measurements in graphene
 short_url: goo.gl/rc8q83
-qr_code: rc8q83.qr.png
 ---
 
 {% slide header %}
 
-# {{ page.title }}
-
-[{{ page.short_url }}](https://{{ page.short_url }})
-
-![{{ page.short_url }}]({{ page.qr_code | asset_path }})
+<h1>{{ page.title }}</h1>
+<div class="qrcode"></div>
+<a class="short_url" href="https://{{ page.short_url }}">{{ page.short_url }}</a>
+<div class="ucr_logo"></div>
 
 {% endslide %}{% slide %}
 
