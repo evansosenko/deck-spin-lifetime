@@ -7,19 +7,24 @@ $background-color: $holo-color-light
 $title-slide-side-margin: 50px
 $title-slide-bottom-margin: 30px
 
-$qrcode-size: 150px
-$qrcode-container-size: $qrcode-size - 10px
+$qrcode-size: 250px
+$qrcode-container-size: $qrcode-size - 20px
 
 //
 // Media Queries
 //
 
 $small: 'only screen and (max-width: 30em)'
-$large: 'only screen and (min-width: 64.063em)'
+$large: 'only screen and (min-width: 74.063em)'
 
 //
 // Mixins
 //
+
+=rescale-background($scale, $width, $height)
+  height: $scale * $height
+  width: $scale * $width
+  background-size: $scale * $width $scale * $height
 
 =ucr_logo($height)
   $logo: 'ucr_logo_cmyk.svg'
@@ -34,12 +39,9 @@ $large: 'only screen and (min-width: 64.063em)'
   background-repeat: no-repeat
 
   @media #{$large}
-    $scale: 2
-    height: $scale * $height
-    width: $scale * $width
     bottom: $title-slide-bottom-margin
     right: $title-slide-side-margin
-    background-size: $scale * $width $scale * $height
+    +rescale-background(2, $width, $height)
 
 //
 // Slide Styles
@@ -89,14 +91,14 @@ article.deck-container
         color: $holo-color-red
 
     .author
-      font-size: 2.5em
+      font-size: 3em
       font-weight: bold
 
     .connector
       font-size: 0.8em
 
     .coauthor
-      font-size: 1.5em
+      font-size: 2.5em
       font-weight: 300
 
   .qrcode
@@ -170,6 +172,10 @@ article.deck-container
     background-size: $width $height
     background-position: center
     background-repeat: no-repeat
+
+    @media #{$small}
+      display: block
+      margin: auto
 
   .social-buttons
     display: inline-block
