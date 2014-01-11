@@ -33,14 +33,18 @@ coauthors: [ Vivek Aji ]
 {% endslide %}{% slide footer %}
 
 ## Final slide
-<p>
-  <a href='http://www.w3.org/html/logo/'>
-    <img alt='HTML5 Powered with CSS3 / Styling, and Semantics' height='64' src='{% asset_path html5-badge-h-css3-semantics.png %}' title='HTML5 Powered with CSS3 / Styling, and Semantics' width='165'>
-  </a>
-</p>
+
 {% if site.social %}
   {% capture social_buttons %}{% include social-buttons.html %}{% endcapture %}
-  {{ social_buttons | strip_newlines }}
 {% endif %}
+
+<a class="ucr_logo" href="{{ page.ucr_url }}"></a>
+<div class="colophon">
+  <a href="http://{{ site.data.meta.site_name }}">{{ site.data.meta.site_name }}</a>
+</div>
+<div class="web-colophon">
+  <a class="html5-badge" href="http://www.w3.org/html/logo/" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
+  {{ social_buttons | strip_newlines }}
+</div>
 
 {% endslide %}
