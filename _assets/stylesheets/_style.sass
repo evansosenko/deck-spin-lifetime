@@ -10,10 +10,6 @@ $title-slide-bottom-margin: 30px
 $qrcode-size: 150px
 $qrcode-container-size: $qrcode-size - 10px
 
-$ucr_logo: 'ucr_logo_cmyk.svg'
-$ucr_logo-height: 100px
-$ucr_logo-width: 5.2 * $ucr_logo-height
-
 //
 // Media Queries
 //
@@ -27,8 +23,6 @@ $large: 'only screen and (min-width: 64.063em)'
 
 body
   background-color: $background-color
-
-
 
 article.deck-container
   font-family: $font-family-base
@@ -75,22 +69,25 @@ article.deck-container
       font-weight: 300
 
   .ucr_logo
-    $scale: 0.5
+    $logo: 'ucr_logo_cmyk.svg'
+    $height: 50px
+    $width: 5.2 * $height
     position: absolute
     bottom: 5px
     width: 100%
-    height: $scale * $ucr_logo-height
-    background-image: image-url($ucr_logo)
-    background-size: $scale * $ucr_logo-width $scale * $ucr_logo-height
+    height: $height
+    background-image: image-url($logo)
+    background-size: $width $height
     background-position: center
     background-repeat: no-repeat
 
     @media #{$large}
-      height: $ucr_logo-height
-      width: $ucr_logo-width
+      $scale: 2
+      height: $scale * $height
+      width: $scale * $width
       bottom: $title-slide-bottom-margin
       right: $title-slide-side-margin
-      background-size: $ucr_logo-width $ucr_logo-height
+      background-size: $scale * $width $scale * $height
 
   .qrcode
     display: none
