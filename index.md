@@ -41,14 +41,16 @@ coauthors: [ Vivek Aji ]
   {% capture social_buttons %}{% include social-buttons.html %}{% endcapture %}
 {% endif %}
 
-<a class="ucr_logo" href="{{ page.ucr_url }}"></a>
-<div class="web-colophon">
-  <a class="html5-badge" href="http://www.w3.org/html/logo/" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
-  {{ social_buttons | strip_newlines }}
-</div>
-<div class="colophon">
-  <a href="http://{{ site.data.meta.site_name }}">{{ site.data.meta.site_name }}</a>
-  <a class="src_url" href="{{ page.src_url }}">Source available on GitHub.</a>
+<div class="footer">
+  <a class="ucr_logo" href="{{ page.ucr_url }}"></a>
+  <div class="colophon">
+    <a href="http://{{ site.data.meta.site_name }}">{{ site.data.meta.site_name }}</a>
+    <a class="src_url" href="{{ page.src_url }}">Source available on GitHub.</a>
+  </div>
+  <div class="web-colophon">
+    <a class="html5-badge" href="http://www.w3.org/html/logo/" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
+    {{ social_buttons | strip_newlines }}
+  </div>
 </div>
 
 {% endslide %}

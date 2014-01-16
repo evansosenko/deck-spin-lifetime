@@ -5,7 +5,8 @@
 $background-color: $holo-color-light
 
 $title-slide-side-margin: 50px
-$title-slide-bottom-margin: 30px
+$title-slide-bottom-margin: 5px
+$title-slide-bottom-margin-large: 30px
 
 $qrcode-size: 250px
 $qrcode-container-size: $qrcode-size - 20px
@@ -14,7 +15,7 @@ $qrcode-container-size: $qrcode-size - 20px
 // Media Queries
 //
 
-$small: 'only screen and (max-width: 30em)'
+$small: 'only screen and (min-width: 30em)'
 $large: 'only screen and (min-width: 74.063em)'
 
 //
@@ -29,17 +30,15 @@ $large: 'only screen and (min-width: 74.063em)'
 =ucr_logo($height)
   $logo: 'ucr_logo_cmyk.svg'
   $width: 5.2 * $height
-  position: absolute
-  bottom: 5px
-  width: 100%
+  display: block
   height: $height
+  width: 100%
   background-image: image-url($logo)
   background-size: $width $height
   background-position: center
   background-repeat: no-repeat
 
   @media #{$large}
-    bottom: $title-slide-bottom-margin
     right: $title-slide-side-margin
     +rescale-background(2, $width, $height)
 
@@ -64,7 +63,7 @@ article.deck-container
     color: $holo-color-dark
 
     @media #{$large}
-      font-size: 4em
+      font-size: 5em
 
   h2
     position: relative
@@ -72,14 +71,13 @@ article.deck-container
     color: darken($holo-color-green, 10%)
 
     &::after
-      position: absolute
-      bottom: 0
-      right: $title-slide-side-margin
-      font-size: 2rem
-
-    @media #{$large}
-      padding-left: $title-slide-side-margin
-      font-size: 3em
+      display: none
+      @media #{$large}
+        display: inline
+        position: absolute
+        bottom: 0
+        right: $title-slide-side-margin
+        font-size: 3rem
 
   ul.authors
     position: absolute
@@ -110,47 +108,62 @@ article.deck-container
 
   .qrcode
     display: none
-    position: absolute
-    +retina-image('rc8q83.qr', $qrcode-size $qrcode-size, $asset-pipeline: true)
-    background-size: $qrcode-size $qrcode-size
-    background-position: center
-    background-repeat: no-repeat
 
     @media #{$large}
       display: block
-      bottom: $title-slide-bottom-margin
+      position: absolute
+      bottom: $title-slide-bottom-margin-large
       left: $title-slide-side-margin
       width: $qrcode-container-size
       height: $qrcode-container-size
+      +retina-image('rc8q83.qr', $qrcode-size $qrcode-size, $asset-pipeline: true)
+      background-size: $qrcode-size $qrcode-size
+      background-position: center
+      background-repeat: no-repeat
       border-radius: em(10)
       box-shadow: 0 0 5px $holo-color-blue
 
   .short_url
     display: none
-    position: absolute
 
     @media #{$large}
       display: inline-block
-      bottom: $title-slide-bottom-margin
+      position: absolute
+      bottom: $title-slide-bottom-margin-large
       left: $title-slide-side-margin + $qrcode-container-size + 20px
       font-size: 3em
 
   header.slide .ucr_logo
     +ucr_logo(50px)
+    position: absolute
+    bottom: $title-slide-bottom-margin
+    width: 100%
+    @media #{$large}
+      bottom: $title-slide-bottom-margin-large
+
+  footer.slide div.footer
+    position: absolute
+    bottom: $title-slide-bottom-margin
+    width: 100%
+    text-align: center
+
+    @media #{$large}
+      bottom: $title-slide-bottom-margin-large
+
 
   footer.slide .ucr_logo
     +ucr_logo(25px)
-    bottom: 6 * $title-slide-bottom-margin
-
-    @media #{$small}
-      margin-bottom: 25px
+    margin-bottom: 5px
+    @media #{$large}
+      position: absolute
+      bottom: 0
 
   .colophon
-    position: absolute
-    bottom: 3 * $title-slide-bottom-margin
-    width: 100%
-    text-align: center
-    font-size: 1.7em
+    @media #{$large}
+      position: absolute
+      bottom: 0
+      width: 100%
+      font-size: 1.7em
 
     a
       display: block
@@ -158,45 +171,35 @@ article.deck-container
     .src_url
       font-size: 0.8rem
 
-    @media #{$small}
-      bottom: 4 * $title-slide-bottom-margin
-
-    @media #{$large}
-      bottom: $title-slide-bottom-margin
-
   .web-colophon
-    position: absolute
-    bottom: $title-slide-bottom-margin
-    width: 100%
-    margin: 0
-    padding: 0
-    text-align: center
-
     @media #{$large}
+      position: absolute
+      bottom: 0
       left: $title-slide-side-margin
-      width: auto
 
   .html5-badge
     $width: 83px
     $height: 32px
-    display: inline-block
+    display: block
     width: $width
     height: $height
-    margin-bottom: -6px
-    margin-right: 5px
+    margin: 10px auto
+    text-align: center
     +retina-image('html5-badge-h-css3-semantics', $width $height, $asset-pipeline: true)
     background-size: $width $height
     background-position: center
     background-repeat: no-repeat
 
     @media #{$small}
-      display: block
-      margin: auto
+      display: inline-block
+      margin: 0
+      margin-bottom: -6px
 
   .social-buttons
-    display: inline-block
+    display: block
+
     @media #{$small}
-      margin-top: 15px
+      display: inline-block
 
 #deck-loading_screen h1
   font-family: "Helvetica", Arial, sans-serif
