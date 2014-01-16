@@ -67,8 +67,15 @@ article.deck-container
       font-size: 4em
 
   h2
+    position: relative
     padding-left: 5px
     color: darken($holo-color-green, 10%)
+
+    &::after
+      position: absolute
+      bottom: 0
+      right: $title-slide-side-margin
+      font-size: 2rem
 
     @media #{$large}
       padding-left: $title-slide-side-margin
@@ -133,17 +140,26 @@ article.deck-container
 
   footer.slide .ucr_logo
     +ucr_logo(25px)
-    bottom: 3 * $title-slide-bottom-margin
+    bottom: 6 * $title-slide-bottom-margin
 
     @media #{$small}
       margin-bottom: 25px
 
   .colophon
     position: absolute
-    bottom: 5 * $title-slide-bottom-margin
+    bottom: 3 * $title-slide-bottom-margin
     width: 100%
     text-align: center
     font-size: 1.7em
+
+    a
+      display: block
+
+    .src_url
+      font-size: 0.8rem
+
+    @media #{$small}
+      bottom: 4 * $title-slide-bottom-margin
 
     @media #{$large}
       bottom: $title-slide-bottom-margin
