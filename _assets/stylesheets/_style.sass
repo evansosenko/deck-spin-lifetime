@@ -72,6 +72,7 @@ article.deck-container
 
     &::after
       display: none
+
       @media #{$large}
         display: inline
         position: absolute
@@ -79,127 +80,131 @@ article.deck-container
         right: $title-slide-side-margin
         font-size: 3rem
 
-  ul.authors
-    position: absolute
-    top: 50%
-    width: 100%
-    margin: 0
-    text-align: center
-    list-style-type: none
-
-    li
-      padding: 0
-
-    a
-      color: $holo-color-green
-      &:hover
-        color: $holo-color-red
-
-    .author
-      font-size: 3em
-      font-weight: bold
-
-    .connector
-      font-size: 0.8em
-
-    .coauthor
-      font-size: 2.5em
-      font-weight: 300
-
-  .qrcode
-    display: none
-
-    @media #{$large}
-      display: block
+  header.slide
+    ul.authors
       position: absolute
-      bottom: $title-slide-bottom-margin-large
-      left: $title-slide-side-margin
-      width: $qrcode-container-size
-      height: $qrcode-container-size
-      +retina-image('rc8q83.qr', $qrcode-size $qrcode-size, $asset-pipeline: true)
-      background-size: $qrcode-size $qrcode-size
+      top: 50%
+      width: 100%
+      margin: 0
+      text-align: center
+      list-style-type: none
+
+      li
+        padding: 0
+
+      a
+        color: $holo-color-green
+        &:hover
+          color: $holo-color-red
+
+      .author
+        font-size: 3em
+        font-weight: bold
+
+      .connector
+        font-size: 0.8em
+
+      .coauthor
+        font-size: 2.5em
+        font-weight: 300
+
+    .qrcode
+      display: none
+
+      @media #{$large}
+        display: block
+        position: absolute
+        bottom: $title-slide-bottom-margin-large
+        left: $title-slide-side-margin
+        width: $qrcode-container-size
+        height: $qrcode-container-size
+        +retina-image('rc8q83.qr', $qrcode-size $qrcode-size, $asset-pipeline: true)
+        background-size: $qrcode-size $qrcode-size
+        background-position: center
+        background-repeat: no-repeat
+        border-radius: em(10)
+        box-shadow: 0 0 5px $holo-color-blue
+
+    .short_url
+      display: none
+
+      @media #{$large}
+        display: inline-block
+        position: absolute
+        bottom: $title-slide-bottom-margin-large
+        left: $title-slide-side-margin + $qrcode-container-size + 20px
+        font-size: 3em
+
+    .ucr_logo
+      +ucr_logo(50px)
+      position: absolute
+      bottom: $title-slide-bottom-margin
+      width: 100%
+
+      @media #{$large}
+        bottom: $title-slide-bottom-margin-large
+
+  footer.slide
+    div.footer
+      position: absolute
+      bottom: $title-slide-bottom-margin
+      width: 100%
+      text-align: center
+
+      @media #{$large}
+        bottom: $title-slide-bottom-margin-large
+
+
+    .ucr_logo
+      +ucr_logo(25px)
+      margin-bottom: 5px
+
+      @media #{$large}
+        position: absolute
+        bottom: 0
+
+    .colophon
+      @media #{$large}
+        position: absolute
+        bottom: 0
+        width: 100%
+        font-size: 1.7em
+
+      a
+        display: block
+
+      .src_url
+        font-size: 0.8rem
+
+    .web-colophon
+      @media #{$large}
+        position: absolute
+        bottom: 0
+        left: $title-slide-side-margin
+
+    .html5-badge
+      $width: 83px
+      $height: 32px
+      display: block
+      width: $width
+      height: $height
+      margin: 10px auto
+      text-align: center
+      +retina-image('html5-badge-h-css3-semantics', $width $height, $asset-pipeline: true)
+      background-size: $width $height
       background-position: center
       background-repeat: no-repeat
-      border-radius: em(10)
-      box-shadow: 0 0 5px $holo-color-blue
 
-  .short_url
-    display: none
+      @media #{$small}
+        display: inline-block
+        margin: 0
+        margin-bottom: -6px
 
-    @media #{$large}
-      display: inline-block
-      position: absolute
-      bottom: $title-slide-bottom-margin-large
-      left: $title-slide-side-margin + $qrcode-container-size + 20px
-      font-size: 3em
-
-  header.slide .ucr_logo
-    +ucr_logo(50px)
-    position: absolute
-    bottom: $title-slide-bottom-margin
-    width: 100%
-    @media #{$large}
-      bottom: $title-slide-bottom-margin-large
-
-  footer.slide div.footer
-    position: absolute
-    bottom: $title-slide-bottom-margin
-    width: 100%
-    text-align: center
-
-    @media #{$large}
-      bottom: $title-slide-bottom-margin-large
-
-
-  footer.slide .ucr_logo
-    +ucr_logo(25px)
-    margin-bottom: 5px
-    @media #{$large}
-      position: absolute
-      bottom: 0
-
-  .colophon
-    @media #{$large}
-      position: absolute
-      bottom: 0
-      width: 100%
-      font-size: 1.7em
-
-    a
+    .social-buttons
       display: block
 
-    .src_url
-      font-size: 0.8rem
-
-  .web-colophon
-    @media #{$large}
-      position: absolute
-      bottom: 0
-      left: $title-slide-side-margin
-
-  .html5-badge
-    $width: 83px
-    $height: 32px
-    display: block
-    width: $width
-    height: $height
-    margin: 10px auto
-    text-align: center
-    +retina-image('html5-badge-h-css3-semantics', $width $height, $asset-pipeline: true)
-    background-size: $width $height
-    background-position: center
-    background-repeat: no-repeat
-
-    @media #{$small}
-      display: inline-block
-      margin: 0
-      margin-bottom: -6px
-
-  .social-buttons
-    display: block
-
-    @media #{$small}
-      display: inline-block
+      @media #{$small}
+        display: inline-block
 
 #deck-loading_screen h1
   font-family: "Helvetica", Arial, sans-serif
