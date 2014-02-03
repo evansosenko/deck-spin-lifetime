@@ -12,7 +12,12 @@ coauthors: [ Vivek Aji ]
 
 {% slide header %}
 
-<h1>{{ page.title }}</h1>
+<div style="text-align:center">
+  <button id="auth-login" style="display:none">login</button>
+  <button id="auth-logout" style="display:none">logout</button>
+</div>
+
+# {{ page.title }}
 <ul class="authors">
   <li class="author"><a href="http://{{ site.data.meta.site_name }}">{{ page.author }}</a>
   </li>
