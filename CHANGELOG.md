@@ -1,6 +1,15 @@
 # Changelog
 
-## HEAD
+## 0.0.4
+
+- Bumped highlightjs to 8.0.
+
+## 0.0.3
+
+- jQuery to 2.1.0.
+- Normalize.css to 3.0.0.
+
+## 0.0.2
 
 - Automatically publish to GitHub pages with Travis CI.
 - Use Markdown for slides, not haml.
