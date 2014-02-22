@@ -60,16 +60,16 @@ firebase: https://deck-spin-lifetime.firebaseio.com/
 # piwik: https://example.com/piwik/
 
 # Uncomment below to configure social media.
-social:
-  facebook:
-    enabled: true
-  google:
-    enabled: true
-    gcfg:
-      lang: en-US
-      parsetags: onload
-  twitter:
-    enabled: true
+# social:
+#   facebook:
+#     enabled: true
+#   google:
+#     enabled: true
+#     gcfg:
+#       lang: en-US
+#       parsetags: onload
+#   twitter:
+#     enabled: true
 
 # Uncomment below to enable deploy.
 :deploy:
