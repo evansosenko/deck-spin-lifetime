@@ -2,6 +2,8 @@
 
 **by [Evan Sosenko](http://evansosenko.com/)**
 
+[![Build Status](https://travis-ci.org/razor-x/deck-spin-lifetime.png?branch=master)](https://travis-ci.org/razor-x/deck-spin-lifetime)
+
 See this and other talks at
 [evansosenko.com](http://evansosenko.com/).
 
