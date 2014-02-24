@@ -59,3 +59,5 @@ coauthors: [ Vivek Aji ]
 </div>
 
 {% endslide %}
+
+<div class="deck-status"><div class="deck-status-current"></div></div>
