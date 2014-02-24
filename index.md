@@ -26,8 +26,10 @@ coauthors: [ Vivek Aji ]
   <li class="author coauthor">{{ coauthor }}</li>
 {% endfor %}
 </ul>
-<div class="qrcode"></div>
-<a class="short_url" href="https://{{ page.short_url }}">{{ page.short_url }}</a>
+<div class="url">
+  <div class="qrcode"></div>
+  <a class="short_url" href="https://{{ page.short_url }}">{{ page.short_url }}</a>
+</div>
 <a class="ucr_logo" href="{{ page.ucr_url }}"></a>
 
 {% endslide %}{% slide %}
@@ -48,10 +50,10 @@ coauthors: [ Vivek Aji ]
 
 <div class="footer">
   <a class="ucr_logo" href="{{ page.ucr_url }}"></a>
-  <div class="colophon">
-    <a href="http://{{ site.data.meta.site_name }}">{{ site.data.meta.site_name }}</a>
-    <a class="src_url" href="{{ page.src_url }}">Source available on GitHub.</a>
-  </div>
+  <ul class="colophon">
+    <li><a href="http://{{ site.data.meta.site_name }}">{{ site.data.meta.site_name }}</a></li>
+    <li><a class="src_url" href="{{ page.src_url }}">Source available on GitHub.</a></li>
+  </ul>
   <div class="web-colophon">
     <a class="html5-badge" href="http://www.w3.org/html/logo/" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
     {{ social_buttons | strip_newlines }}

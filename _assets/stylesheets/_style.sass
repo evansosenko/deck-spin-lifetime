@@ -15,8 +15,9 @@ $qrcode-container-size: $qrcode-size - 20px
 // Media Queries
 //
 
-$small: 'only screen and (min-width: 30em)'
-$large: 'only screen and (min-width: 74.063em)'
+$medium: 'only screen and (min-width: 641px)'
+$xga: 'only screen and (min-width: 1024px)'
+$large: 'only screen and (min-width: 1280px)'
 
 //
 // Mixins
@@ -38,8 +39,11 @@ $large: 'only screen and (min-width: 74.063em)'
   background-position: center
   background-repeat: no-repeat
 
-  @media #{$large}
+  @media #{$xga}
     right: $title-slide-side-margin
+    +rescale-background(1.5, $width, $height)
+
+  @media #{$large}
     +rescale-background(2, $width, $height)
 
 //
@@ -62,7 +66,7 @@ article.deck-container
     font-size: 2rem
     color: $holo-color-dark
 
-    @media #{$large}
+    @media #{$xga}
       font-size: 5rem
 
   h2
@@ -71,13 +75,13 @@ article.deck-container
     padding-top: initial
     color: darken($holo-color-green, 10%)
 
-    @media #{$large}
+    @media #{$xga}
       font-size: 4rem
 
     &::after
       display: none
 
-      @media #{$large}
+      @media #{$xga}
         display: inline
         position: absolute
         bottom: 0
@@ -111,7 +115,7 @@ article.deck-container
         font-size: 2rem
         font-weight: bold
 
-        @media #{$large}
+        @media #{$xga}
           font-size: 4rem
 
       .connector
@@ -121,35 +125,31 @@ article.deck-container
         font-size: 2rem
         font-weight: 300
 
-        @media #{$large}
+        @media #{$xga}
           font-size: 2.5rem
 
-    .qrcode
+    .url
       display: none
 
-      @media #{$large}
+      @media #{$xga}
         display: block
         position: absolute
         bottom: $title-slide-bottom-margin-large
         left: $title-slide-side-margin
-        width: $qrcode-container-size
-        height: $qrcode-container-size
-        +retina-image('rc8q83.qr', $qrcode-size $qrcode-size, $asset-pipeline: true)
-        background-size: $qrcode-size $qrcode-size
-        background-position: center
-        background-repeat: no-repeat
-        border-radius: 10px
-        box-shadow: 0 0 5px $holo-color-blue
 
-    .short_url
-      display: none
+        .qrcode
+          width: $qrcode-container-size
+          height: $qrcode-container-size
+          +retina-image('rc8q83.qr', $qrcode-size $qrcode-size, $asset-pipeline: true)
+          background-size: $qrcode-size $qrcode-size
+          background-position: center
+          background-repeat: no-repeat
+          border-radius: 10px
+          box-shadow: 0 0 5px $holo-color-blue
 
-      @media #{$large}
-        display: inline-block
-        position: absolute
-        bottom: $title-slide-bottom-margin-large
-        left: $title-slide-side-margin + $qrcode-container-size + 20px
-        font-size: 4rem
+        .short_url
+          display: block
+          font-size: 4rem
 
     .ucr_logo
       +ucr_logo(50px)
@@ -157,7 +157,7 @@ article.deck-container
       bottom: $title-slide-bottom-margin
       width: 100%
 
-      @media #{$large}
+      @media #{$xga}
         bottom: $title-slide-bottom-margin-large
 
   footer.slide
@@ -167,33 +167,40 @@ article.deck-container
       width: 100%
       text-align: center
 
-      @media #{$large}
+      @media #{$xga}
         bottom: $title-slide-bottom-margin-large
-
 
     .ucr_logo
       +ucr_logo(25px)
-      margin-bottom: 5px
+      margin-bottom: 1rem
 
-      @media #{$large}
+      @media #{$xga}
         position: absolute
         bottom: 0
+        margin-bottom: 0
 
-    .colophon
-      @media #{$large}
+    ul.colophon
+      margin: 0
+      margin-bottom: 1rem
+      text-align: center
+      list-style-type: none
+
+      @media #{$xga}
         position: absolute
         bottom: 0
         width: 100%
+        margin-bottom: 0
         font-size: 1.7rem
 
-      a
-        display: block
+      li
+        padding: 0
+        line-height: 1rem
 
       .src_url
         font-size: 0.8rem
 
     .web-colophon
-      @media #{$large}
+      @media #{$xga}
         position: absolute
         bottom: 0
         left: $title-slide-side-margin
@@ -204,22 +211,21 @@ article.deck-container
       display: block
       width: $width
       height: $height
-      margin: 10px auto
+      margin: 0 auto
       text-align: center
       +retina-image('html5-badge-h-css3-semantics', $width $height, $asset-pipeline: true)
       background-size: $width $height
       background-position: center
       background-repeat: no-repeat
 
-      @media #{$small}
+      @media #{$medium}
         display: inline-block
         margin: 0
-        margin-bottom: -6px
 
     .social-buttons
       display: block
 
-      @media #{$small}
+      @media #{$medium}
         display: inline-block
 
 #deck-loading_screen h1
@@ -229,5 +235,5 @@ article.deck-container
   > div.spinner
     font-size: 0.8rem
 
-    @media #{$large}
+    @media #{$xga}
       margin-right: 30px
