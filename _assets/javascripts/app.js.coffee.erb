@@ -23,7 +23,7 @@ $(document).bind 'deck.init', ->
 <% if site.config['firebase'] then require_asset 'remote' end %>
 
 # Initialize the deck.
-$.deck '.slide'
+$.deck '.slide', touch: swipeDirection: 'vertical'
 
 # Invoke highlight.js on page load.
 $ -> hljs.initHighlighting()
