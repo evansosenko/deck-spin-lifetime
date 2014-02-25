@@ -19,7 +19,7 @@ gems:
   - jekyll-assets
   - sass
   - coffee_script
-  - bourbon
+  - jekyll-assets/bourbon
 
 # Jekyll::AssetsPlugin options.
 assets:
