@@ -20,6 +20,7 @@ gems:
   - sass
   - coffee_script
   - jekyll-assets/bourbon
+  - jekyll/scholar
 
 # Jekyll::AssetsPlugin options.
 assets:
@@ -88,3 +89,6 @@ google_analytics:
 #   # remote content will not be removed from these files and folders
 #   :upload_only:
 #     - content/
+
+scholar:
+  style: "https://raw.github.com/citation-style-language/styles/master/american-physics-society.csl"
