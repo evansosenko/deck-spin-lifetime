@@ -33,7 +33,7 @@ $large: 'only screen and (min-width: 1280px)'
   $width: 5.2 * $height
   display: block
   height: $height
-  width: 100%
+  width: 100vw
   background-image: image-url($logo)
   background-size: $width $height
   background-position: center
@@ -62,7 +62,7 @@ article.deck-container
     font-weight: 300
 
   h1
-    top: 30%
+    top: 30vh
     font-size: 2rem
     color: $holo-color-dark
 
@@ -97,8 +97,8 @@ article.deck-container
   header.slide
     ul.authors
       position: absolute
-      top: 50%
-      width: 100%
+      top: 50vh
+      width: 100vw
       margin: 0
       text-align: center
       list-style-type: none
@@ -155,7 +155,7 @@ article.deck-container
       +ucr_logo(50px)
       position: absolute
       bottom: $title-slide-bottom-margin
-      width: 100%
+      width: 100vw
 
       @media #{$xga}
         bottom: $title-slide-bottom-margin-large
@@ -164,7 +164,7 @@ article.deck-container
     div.footer
       position: absolute
       bottom: $title-slide-bottom-margin
-      width: 100%
+      width: 100vw
       text-align: center
 
       @media #{$xga}
@@ -188,7 +188,7 @@ article.deck-container
       @media #{$xga}
         position: absolute
         bottom: 0
-        width: 100%
+        width: 100vw
         margin-bottom: 0
         font-size: 1.7rem
 
