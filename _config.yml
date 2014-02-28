@@ -2,6 +2,9 @@
 domain: http://io.evansosenko.com/deck-spin-lifetime
 baseurl: http://io.evansosenko.com/deck-spin-lifetime
 markdown: redcarpet
+redcarpet:
+  extensions:
+    - no_intra_emphasis
 pygments: true
 exclude:
   - CHANGELOG.md
