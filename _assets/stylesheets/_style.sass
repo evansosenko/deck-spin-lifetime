@@ -17,7 +17,7 @@ $qrcode-container-size: $qrcode-size - 20px
 
 $medium: 'only screen and (min-width: 641px)'
 $xga: 'only screen and (min-width: 1024px)'
-$large: 'only screen and (min-width: 1280px)'
+$wxga: 'only screen and (min-width: 1280px)'
 
 //
 // Mixins
@@ -43,7 +43,7 @@ $large: 'only screen and (min-width: 1280px)'
     right: $title-slide-side-margin
     +rescale-background(1.5, $width, $height)
 
-  @media #{$large}
+  @media #{$wxga}
     +rescale-background(2, $width, $height)
 
 //
