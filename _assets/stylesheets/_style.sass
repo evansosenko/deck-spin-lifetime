@@ -4,7 +4,7 @@
 
 $background-color: $holo-color-light
 
-$title-slide-side-margin: 50px
+$title-slide-side-margin: 1rem
 $title-slide-bottom-margin: 1rem
 $title-slide-bottom-margin-large: 30px
 
@@ -12,7 +12,7 @@ $qrcode-size: 270px
 $qrcode-container-size: $qrcode-size - 10px
 
 //
-// Media Queries
+// Media queries
 //
 
 $medium: 'only screen and (min-width: 641px)'
@@ -47,7 +47,7 @@ $wxga: 'only screen and (min-width: 1280px)'
     +rescale-background(2, $width, $height)
 
 //
-// Slide Styles
+// Slide styles
 //
 
 body
@@ -88,11 +88,38 @@ article.deck-container
         right: $title-slide-side-margin
         font-size: 3rem
 
+  cite
+    margin-left: $title-slide-side-margin
+    font-size: 0.8rem
+
+  ul.equations
+    @media #{$xga}
+      font-size: 1.7rem
+
+  p.equation
+    @media #{$xga}
+      font-size: 2rem
+
+      &.large
+        font-size: 3rem
+
+  .plot
+    padding: 0.5rem
+    box-shadow: 0 0 5px $holo-color-blue
+    border-radius: 5px
+
+  .inner
+    position: relative
+
   .deck-status
     position: absolute
     bottom: $title-slide-bottom-margin-large
     width: 100%
     text-align: center
+
+  //
+  // Slides
+  //
 
   header.slide
     ul.authors
@@ -228,6 +255,10 @@ article.deck-container
       @media #{$medium}
         display: inline-block
 
+//
+// Loading screen
+//
+
 #deck-loading_screen h1
   font-family: "Helvetica", Arial, sans-serif
   font-weight: 300
@@ -237,6 +268,10 @@ article.deck-container
 
     @media #{$xga}
       margin-right: 30px
+
+//
+// Slide notes
+//
 
 .notes.remodal ul li
   font-family: $font-roboto
@@ -252,7 +287,3 @@ article.deck-container
   position: absolute
   bottom: 0
   right: 0
-
-cite
-  font-size: 0.8rem
-  padding-left: 1rem
