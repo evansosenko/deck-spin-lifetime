@@ -60,6 +60,31 @@ coauthors: [ Vivek Aji ]
   {% include note.html id="introduction" %}
 {% endslide %}
 
+{% slide#nonlocal_resistance %}
+  <h2>Nonlocal resistance</h2>
+
+  <div class="inner">
+    <p class="equation">\( R_{\text{NL}}^± = ± V / I = ± P^2 R_N f \)</p>
+    <p class="equation right top">\( R_N = \frac{λ}{W} \frac{1}{σ_G} = \frac{λ}{L W} \frac{1}{σ^N} \)</p>
+
+    {% slide div.center %}
+      <h3>Solution</h3>
+      <p class="equation">$$f = \operatorname{Re}{ \left\{ \left[ 2 \left( \sqrt{1 + i ω τ} + λ / r \right) e^{\left( L / λ \right) \sqrt{1 + i ω τ}} \\ + \frac{\left( λ / r \right)^2}{\sqrt{1 + i ω τ}} \sinh{\left( L / λ \right) \sqrt{1 + i ω τ}} \right]^{-1} \right\} }$$</p>
+    {% endslide %}
+
+    {% slide div.center %}
+      <h3>Only scales that appear in \( f \)</h3>
+      <ul class="equation">
+        <li>\( L / λ\)</li>
+        <li>\( λ / r \)</li>
+        <li>\( ω τ \)</li>
+      </ul>
+    {% endslide %}
+  </div>
+
+  {% include note.html id="nonlocal_resistance" %}
+{% endslide %}
+
 {% slide %}
   <h2>Body</h2>
 {% endslide %}

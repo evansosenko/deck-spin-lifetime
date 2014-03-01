@@ -19,3 +19,11 @@
     - Include effects on contacts with \( J_{↑↓}^C \)
     - Solve by assuming appropriate continuity conditions on current and spin current at (I) and (D)
     - Applied transverse magnetic field causes spins to precess as they diffuse
+
+- id: nonlocal_resistance
+  text:
+    - Nonlocal resistance is the voltage normalized by the injected current
+    - Boundary conditions give linear system, solve to obtain \( μ_s^N \)
+    - Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP) to the field
+    - \( P \) is a polarization, \( P ≤ 1 \)
+    - \( R_N \) is effectively the resistance of (N) over the spin diffusion length \( λ \)
