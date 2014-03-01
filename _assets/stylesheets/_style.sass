@@ -187,6 +187,19 @@ article.deck-container
       @media #{$xga}
         bottom: $title-slide-bottom-margin-large
 
+  #geometry
+    .equations
+      list-style: none
+      @media #{$xga}
+        position: absolute
+        top: 0
+
+        &.left
+          left: $title-slide-side-margin
+
+        &.right
+          right: $title-slide-side-margin
+
   footer.slide
     div.footer
       position: absolute

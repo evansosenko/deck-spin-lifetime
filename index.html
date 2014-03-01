@@ -34,6 +34,32 @@ coauthors: [ Vivek Aji ]
   <a class="ucr_logo" href="{{ page.ucr_url }}"></a>
 {% endslide %}
 
+{% slide#geometry %}
+  <h2>Device geometry</h2>
+  <div class="inner">
+    <img class="half" src="{% asset_path device.svg %}" alt="Device" />
+    <p class="equation large">$$D ∇^2 μ_s - \frac{μ_s}{τ} + ω × μ_s = 0$$</p>
+    <p class="equation large">$$V ∝ μ_s^N(x = L)$$</p>
+
+    <ul class="equations left">
+      <li>\( L \) : contact spacing</li>
+      <li>\( D \) : diffusion constant</li>
+      <li>\( τ \) : spin lifetime</li>
+      <li>\( ω = g μ_B B / ħ \)</li>
+    </ul>
+
+    <ul id="eq-currents" class="equations right">
+      <li>\( μ_s = \frac{1}{2} \left( μ_↑ - μ_↓ \right) \)</li>
+      <li>\( J_{↑↓} = σ_{↑↓} ∇μ_{↑↓} \)</li>
+      <li>\( J_{↑↓}^C = Σ_{↑↓} \left( μ^N_{↑↓} - μ^F_{↑↓} \right)_c \)</li>
+      <li>\( J = J_↑ + J_↓ \)</li>
+      <li>\( J_s = J_↑ - J_↓ \)</li>
+    </ul>
+  </div>
+
+  {% include note.html id="introduction" %}
+{% endslide %}
+
 {% slide %}
   <h2>Body</h2>
 {% endslide %}

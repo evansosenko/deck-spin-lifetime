@@ -8,4 +8,14 @@
 # Create a link to open the notes in a modal using
 #
 # {% include note.html id="unique-note-id" %}
--
+- id: introduction
+  text:
+    - Spin injection experimental geometry
+    - Ferromagnetic contacts (F) on semiconductor (N) (graphene)
+    - Current flows on the left only from the injector (I) at \( x = 0 \) into (N)
+    - Spin current diffuses to the detector (D) at \( x = L \)
+    - Measured voltage is proportional to the spin chemical potential at (D)
+    - Modeled by diffusion equation.
+    - Include effects on contacts with \( J_{↑↓}^C \)
+    - Solve by assuming appropriate continuity conditions on current and spin current at (I) and (D)
+    - Applied transverse magnetic field causes spins to precess as they diffuse
