@@ -88,13 +88,12 @@ article.deck-container
         right: $title-slide-side-margin
         font-size: 3rem
 
-  p, ul
+  h3, p, ul
     margin-left: $title-slide-side-margin
 
   cite
     margin-left: $title-slide-side-margin
     font-size: 0.8rem
-
 
   .equation
     font-size: 0.8rem
@@ -115,7 +114,15 @@ article.deck-container
   .inner
     position: relative
 
+  .center
+    text-align: center
+
   @media #{$xga}
+    h3
+      margin-left: 0
+      text-align: center
+      font-size: 3rem
+
     .left, .right, .top
       position: absolute
 
