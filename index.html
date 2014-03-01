@@ -21,7 +21,7 @@
   <meta property="og:site_name" content="evansosenko.com" />
 
 
-<meta property="og:updated_time" content="2014-02-28T04:27:33+00:00" />
+<meta property="og:updated_time" content="2014-03-01T22:24:09+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -53,7 +53,7 @@
   <meta name="twitter:creator" content="@evansosenko" />
 
 
-  <link rel="stylesheet" href="http://io.evansosenko.com/deck-spin-lifetime/assets/app-66b7e2c6cf83d88dadb490ea9336284b.css">
+  <link rel="stylesheet" href="http://io.evansosenko.com/deck-spin-lifetime/assets/app-f41b46c07d53379b8a9867810b6e317b.css">
   <script src="http://io.evansosenko.com/deck-spin-lifetime/assets/deck.js/modernizr.custom-c5fe987577be4d1eccebb71dfb2d571b.js"></script>
 </head>
 
@@ -64,65 +64,110 @@
   <article class="deck-container">
     <style>h2::after{content:"goo.gl/rc8q83"};</style>
 
-<p><header class="slide"></p>
+<header class="slide">
+  
+    <div style="text-align:center">
+      <button id="auth-login" style="display:none">login</button>
+      <button id="auth-logout" style="display:none">logout</button>
+    </div>
+  
 
-<div style="text-align:center">
-  <button id="auth-login" style="display:none">login</button>
-  <button id="auth-logout" style="display:none">logout</button>
-</div>
+  <h1>Effect of contacts on spin lifetime measurements in graphene</h1>
 
-<h1>Effect of contacts on spin lifetime measurements in graphene</h1>
-
-<ul class="authors">
-  <li class="author"><a href="http://evansosenko.com">Evan Sosenko</a>
-  </li>
+  <ul class="authors">
+    <li class="author"><a href="http://evansosenko.com">Evan Sosenko</a></li>
   <li class"connector">with</li>
-
-  <li class="author coauthor">Vivek Aji</li>
-
-</ul>
-
-<div class="url">
-  <div class="qrcode"></div>
-  <a class="short_url" href="https://goo.gl/rc8q83">goo.gl/rc8q83</a>
-</div>
-
-<p><a class="ucr_logo" href="http://www.physics.ucr.edu/"></a></p>
-
-<p></header><section class="slide"></p>
-
-<h2>Body</h2>
-
-<p></section><section class="slide my-class"></p>
-
-<h2>More body</h2>
-
-<p></section><footer class="slide"></p>
-
-<h2>Final slide</h2>
-
-<div class="footer">
-  <a class="ucr_logo" href="http://www.physics.ucr.edu/"></a>
-  <ul class="colophon">
-    <li><a href="http://evansosenko.com">evansosenko.com</a></li>
-    <li><a class="src_url" href="https://github.com/razor-x/deck-spin-lifetime">Source available on GitHub.</a></li>
+  
+    <li class="author coauthor">Vivek Aji</li>
+  
   </ul>
-  <div class="web-colophon">
-    <a class="html5-badge" href="http://www.w3.org/html/logo/" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
-    
+  <div class="url">
+    <div class="qrcode"></div>
+    <a class="short_url" href="https://goo.gl/rc8q83">goo.gl/rc8q83</a>
   </div>
-</div>
+  <a class="ucr_logo" href="http://www.physics.ucr.edu/"></a>
+</header>
 
-<p></footer></p>
+<section id="geometry" class="slide">
+  <h2>Device geometry</h2>
+  <div class="inner">
+    <img class="half" src="http://io.evansosenko.com/deck-spin-lifetime/assets/device-e8a324e788da2fad99fdb239ad780dc3.svg" alt="Device" />
+    <p class="equation large">$$D ∇^2 μ_s - \frac{μ_s}{τ} + ω × μ_s = 0$$</p>
+    <p class="equation large">$$V ∝ μ_s^N(x = L)$$</p>
+
+    <ul class="equations left">
+      <li>\( L \) : contact spacing</li>
+      <li>\( D \) : diffusion constant</li>
+      <li>\( τ \) : spin lifetime</li>
+      <li>\( ω = g μ_B B / ħ \)</li>
+    </ul>
+
+    <ul id="eq-currents" class="equations right">
+      <li>\( μ_s = \frac{1}{2} \left( μ_↑ - μ_↓ \right) \)</li>
+      <li>\( J_{↑↓} = σ_{↑↓} ∇μ_{↑↓} \)</li>
+      <li>\( J_{↑↓}^C = Σ_{↑↓} \left( μ^N_{↑↓} - μ^F_{↑↓} \right)_c \)</li>
+      <li>\( J = J_↑ + J_↓ \)</li>
+      <li>\( J_s = J_↑ - J_↓ \)</li>
+    </ul>
+  </div>
+
+  <a class="notes-link" data-remodal-target="modal-notes-introduction" href="#modal-notes-introduction"
+  title="Slide notes"><img src="http://io.evansosenko.com/deck-spin-lifetime/assets/ico-file-baa7011d4fad6c7719bbc6a620bf956b.svg"></a>
+
+</section>
+
+<section class="slide">
+  <h2>Body</h2>
+</section>
+
+<section class="slide my-class">
+  <h2>More body</h2>
+</section>
+
+<footer class="slide">
+  <h2>Final slide</h2>
+
+  <div class="footer">
+    <a class="ucr_logo" href="http://www.physics.ucr.edu/"></a>
+    <ul class="colophon">
+      <li><a href="http://evansosenko.com">evansosenko.com</a></li>
+      <li><a class="src_url" href="https://github.com/razor-x/deck-spin-lifetime">Source available on GitHub.</a></li>
+    </ul>
+    <div class="web-colophon">
+      <a class="html5-badge" href="http://www.w3.org/html/logo/" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
+      
+    </div>
+  </div>
+
+  
+</footer>
 
 <div class="deck-status"><div class="deck-status-current"></div></div>
 
   </article>
   
 
-  <section class="remodal notes" data-remodal-id="modal-notes-"
+  <section class="remodal notes" data-remodal-id="modal-notes-introduction"
     data-remodal-options='{"hashTracking": false}' style="display:none;">
     <ul>
+    
+      <li>Spin injection experimental geometry</li>
+    
+      <li>Ferromagnetic contacts (F) on semiconductor (N) (graphene)</li>
+    
+      <li>Current flows on the left only from the injector (I) at \( x = 0 \) into (N)</li>
+    
+      <li>Spin current diffuses to the detector (D) at \( x = L \)</li>
+    
+      <li>Measured voltage is proportional to the spin chemical potential at (D)</li>
+    
+      <li>Modeled by diffusion equation.</li>
+    
+      <li>Include effects on contacts with \( J_{↑↓}^C \)</li>
+    
+      <li>Solve by assuming appropriate continuity conditions on current and spin current at (I) and (D)</li>
+    
+      <li>Applied transverse magnetic field causes spins to precess as they diffuse</li>
     
     </ul>
   </section>
