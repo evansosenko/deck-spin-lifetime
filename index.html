@@ -89,8 +89,12 @@ coauthors: [ Vivek Aji ]
   <h2>Body</h2>
 {% endslide %}
 
-{% slide.my-class %}
-  <h2>More body</h2>
+{% slide %}
+  <h2>Limits</h2>
+  <div class="inner center">
+    <img class="plot half-width" src="{% asset_path plots/PhysRevB.86.235408.fig.3.svg %}" alt="Fig. 3 from PhysRevB.86.235408" />
+    {% reference PhysRevB.86.235408 %}
+  </div>
 {% endslide %}
 
 {% slide footer %}
