@@ -1,0 +1,66 @@
+---
+layout: default
+title: Effect of contacts on spin lifetime measurements in graphene
+author: Evan Sosenko
+short_url: goo.gl/rc8q83
+src_url: https://github.com/razor-x/deck-spin-lifetime
+ucr_url: http://www.physics.ucr.edu/
+coauthors: [ Vivek Aji ]
+---
+
+<style>h2::after{content:"{{ page.short_url }}"};</style>
+
+{% slide header %}
+  {% if site.firebase %}
+    <div style="text-align:center">
+      <button id="auth-login" style="display:none">login</button>
+      <button id="auth-logout" style="display:none">logout</button>
+    </div>
+  {% endif %}
+
+  <h1>{{ page.title }}</h1>
+
+  <ul class="authors">
+    <li class="author"><a href="http://{{ site.data.meta.site_name }}">{{ page.author }}</a></li>
+  <li class"connector">with</li>
+  {% for coauthor in page.coauthors %}
+    <li class="author coauthor">{{ coauthor }}</li>
+  {% endfor %}
+  </ul>
+  <div class="url">
+    <div class="qrcode"></div>
+    <a class="short_url" href="https://{{ page.short_url }}">{{ page.short_url }}</a>
+  </div>
+  <a class="ucr_logo" href="{{ page.ucr_url }}"></a>
+{% endslide %}
+
+{% slide %}
+  <h2>Body</h2>
+{% endslide %}
+
+{% slide.my-class %}
+  <h2>More body</h2>
+{% endslide %}
+
+{% slide footer %}
+  <h2>Final slide</h2>
+
+  <div class="footer">
+    <a class="ucr_logo" href="{{ page.ucr_url }}"></a>
+    <ul class="colophon">
+      <li><a href="http://{{ site.data.meta.site_name }}">{{ site.data.meta.site_name }}</a></li>
+      <li><a class="src_url" href="{{ page.src_url }}">Source available on GitHub.</a></li>
+    </ul>
+    <div class="web-colophon">
+      <a class="html5-badge" href="http://www.w3.org/html/logo/" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
+      {{ social_buttons | strip_newlines }}
+    </div>
+  </div>
+
+  {% if site.social %}
+    {% capture social_buttons %}{% include social-buttons.html %}{% endcapture %}
+    {{ social_buttons | strip_newlines }}
+  {% endif %}
+{% endslide %}
+
+<div class="deck-status"><div class="deck-status-current"></div></div>
