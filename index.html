@@ -21,7 +21,7 @@
   <meta property="og:site_name" content="evansosenko.com" />
 
 
-<meta property="og:updated_time" content="2014-03-01T22:33:29+00:00" />
+<meta property="og:updated_time" content="2014-03-01T23:18:01+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -53,7 +53,7 @@
   <meta name="twitter:creator" content="@evansosenko" />
 
 
-  <link rel="stylesheet" href="http://io.evansosenko.com/deck-spin-lifetime/assets/app-20bfb66d7feb85f317e19110a9c2fafd.css">
+  <link rel="stylesheet" href="http://io.evansosenko.com/deck-spin-lifetime/assets/app-1d9fedf6fe00e8b0a72d35da122d3814.css">
   <script src="http://io.evansosenko.com/deck-spin-lifetime/assets/deck.js/modernizr.custom-c5fe987577be4d1eccebb71dfb2d571b.js"></script>
 </head>
 
@@ -95,14 +95,14 @@
     <p class="equation large">$$D ∇^2 μ_s - \frac{μ_s}{τ} + ω × μ_s = 0$$</p>
     <p class="equation large">$$V ∝ μ_s^N(x = L)$$</p>
 
-    <ul class="equations left">
+    <ul class="equation left top">
       <li>\( L \) : contact spacing</li>
       <li>\( D \) : diffusion constant</li>
       <li>\( τ \) : spin lifetime</li>
       <li>\( ω = g μ_B B / ħ \)</li>
     </ul>
 
-    <ul id="eq-currents" class="equations right">
+    <ul class="equation right top">
       <li>\( μ_s = \frac{1}{2} \left( μ_↑ - μ_↓ \right) \)</li>
       <li>\( J_{↑↓} = σ_{↑↓} ∇μ_{↑↓} \)</li>
       <li>\( J_{↑↓}^C = Σ_{↑↓} \left( μ^N_{↑↓} - μ^F_{↑↓} \right)_c \)</li>
@@ -112,6 +112,33 @@
   </div>
 
   <a class="notes-link" data-remodal-target="modal-notes-introduction" href="#modal-notes-introduction"
+  title="Slide notes"><img src="http://io.evansosenko.com/deck-spin-lifetime/assets/ico-file-baa7011d4fad6c7719bbc6a620bf956b.svg"></a>
+
+</section>
+
+<section id="nonlocal_resistance" class="slide">
+  <h2>Nonlocal resistance</h2>
+
+  <div class="inner">
+    <p class="equation">\( R_{\text{NL}}^± = ± V / I = ± P^2 R_N f \)</p>
+    <p class="equation right top">\( R_N = \frac{λ}{W} \frac{1}{σ_G} = \frac{λ}{L W} \frac{1}{σ^N} \)</p>
+
+    <div class="slide center">
+      <h3>Solution</h3>
+      <p class="equation">$$f = \operatorname{Re}{ \left\{ \left[ 2 \left( \sqrt{1 + i ω τ} + λ / r \right) e^{\left( L / λ \right) \sqrt{1 + i ω τ}} \\ + \frac{\left( λ / r \right)^2}{\sqrt{1 + i ω τ}} \sinh{\left( L / λ \right) \sqrt{1 + i ω τ}} \right]^{-1} \right\} }$$</p>
+    </div>
+
+    <div class="slide center">
+      <h3>Only scales that appear in \( f \)</h3>
+      <ul class="equation">
+        <li>\( L / λ\)</li>
+        <li>\( λ / r \)</li>
+        <li>\( ω τ \)</li>
+      </ul>
+    </div>
+  </div>
+
+  <a class="notes-link" data-remodal-target="modal-notes-nonlocal_resistance" href="#modal-notes-nonlocal_resistance"
   title="Slide notes"><img src="http://io.evansosenko.com/deck-spin-lifetime/assets/ico-file-baa7011d4fad6c7719bbc6a620bf956b.svg"></a>
 
 </section>
@@ -168,6 +195,23 @@
       <li>Solve by assuming appropriate continuity conditions on current and spin current at (I) and (D)</li>
     
       <li>Applied transverse magnetic field causes spins to precess as they diffuse</li>
+    
+    </ul>
+  </section>
+
+  <section class="remodal notes" data-remodal-id="modal-notes-nonlocal_resistance"
+    data-remodal-options='{"hashTracking": false}' style="display:none;">
+    <ul>
+    
+      <li>Nonlocal resistance is the voltage normalized by the injected current</li>
+    
+      <li>Boundary conditions give linear system, solve to obtain \( μ_s^N \)</li>
+    
+      <li>Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP) to the field</li>
+    
+      <li>\( P \) is a polarization, \( P ≤ 1 \)</li>
+    
+      <li>\( R_N \) is effectively the resistance of (N) over the spin diffusion length \( λ \)</li>
     
     </ul>
   </section>
