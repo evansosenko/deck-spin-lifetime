@@ -27,3 +27,4 @@
     - Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP) to the field
     - \( P \) is a polarization, \( P ≤ 1 \)
     - \( R_N \) is effectively the resistance of (N) over the spin diffusion length \( λ \)
+    - \( r \) is a new length scale introduced by the contact resistance and effectively proportional to it
