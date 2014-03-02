@@ -156,9 +156,14 @@ article.deck-container
     text-align: center
 
   .plot
+    margin: auto
     padding: 0.5rem
     box-shadow: 0 0 5px $holo-color-blue
     border-radius: 5px
+
+  .third-width
+    width: 65vw
+    max-height: 85vh
 
   .half-width
     width: 50vw
@@ -301,6 +306,26 @@ article.deck-container
 
       @media #{$medium}
         display: inline-block
+
+  #limits
+    div.top
+      max-width: 20vw
+
+  .slide.fits
+    .inset
+      position: absolute
+      top: 10px
+      right: 10px
+      width: 25%
+      background-color: $background-color
+
+    @media #{$xga}
+      .inner.plot
+        float: left
+        margin-left: $title-slide-side-margin
+
+      .reference
+        clear: both
 
 //
 // Loading screen
