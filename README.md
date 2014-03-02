@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/razor-x/deck-spin-lifetime.png?branch=master)](https://travis-ci.org/razor-x/deck-spin-lifetime)
 
+[Contributed Talk, APS March Meeting March 2014, Denver, CO, US.](http://meetings.aps.org/Meeting/MAR14/Event/209736)
+
 See this and other talks at
 [evansosenko.com](http://evansosenko.com/).
 
