@@ -21,7 +21,7 @@
   <meta property="og:site_name" content="evansosenko.com" />
 
 
-<meta property="og:updated_time" content="2014-03-02T00:19:42+00:00" />
+<meta property="og:updated_time" content="2014-03-02T01:18:54+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -101,7 +101,7 @@
       <li>\( L \) : contact spacing</li>
       <li>\( D \) : diffusion constant</li>
       <li>\( τ \) : spin lifetime</li>
-      <li>\(λ = \sqrt{D τ} \)</li>
+      <li>\( λ = \sqrt{D τ} \)</li>
       <li>\( ω = g μ_B B / ħ \)</li>
     </ul>
 
@@ -134,7 +134,7 @@
     <div class="slide center">
       <h3>Only scales that appear in \( f \)</h3>
       <ul class="equation inline">
-        <li>\( L / λ\)</li>
+        <li>\( L / λ \)</li>
         <li>\( λ / r \)</li>
         <li>\( ω τ \)</li>
       </ul>
@@ -153,6 +153,10 @@
   <div class="inner center">
     <p><cite id="PhysRevLett.105.167202"> W. Han, K. Pi, K. M. McCreary, Y. Li, J. J. I. Wong, A. G. Swartz and R. K. Kawakami, Phys. Rev. Lett. <b>105</b>, 167202 (2010).</cite></p>
   </div>
+
+  <a class="notes-link" data-remodal-target="modal-notes-fits" href="#modal-notes-fits"
+  title="Slide notes"><img src="http://io.evansosenko.com/deck-spin-lifetime/assets/ico-file-baa7011d4fad6c7719bbc6a620bf956b.svg"></a>
+
 </section>
 
 <section class="slide">
@@ -161,6 +165,10 @@
     <img class="plot half-width" src="http://io.evansosenko.com/deck-spin-lifetime/assets/plots/PhysRevB.86.235408.fig.3-fb4cdc3307a29e051e92190581fa3384.svg" alt="Fig. 3 from PhysRevB.86.235408" />
     <p><cite id="PhysRevB.86.235408"> T. Maassen, I. J. Vera-Marun, M. H. D. Guimarães and B. J. van Wees, Phys. Rev. B <b>86</b>, 235408 (2012).</cite></p>
   </div>
+
+  <a class="notes-link" data-remodal-target="modal-notes-limits" href="#modal-notes-limits"
+  title="Slide notes"><img src="http://io.evansosenko.com/deck-spin-lifetime/assets/ico-file-baa7011d4fad6c7719bbc6a620bf956b.svg"></a>
+
 </section>
 
 <footer class="slide">
@@ -190,23 +198,23 @@
     data-remodal-options='{"hashTracking": false}' style="display:none;">
     <ul>
     
-      <li>Spin injection experimental geometry</li>
+      <li>Spin injection experimental geometry.</li>
     
-      <li>Ferromagnetic contacts (F) on semiconductor (N) (graphene)</li>
+      <li>Ferromagnetic contacts (F) on semiconductor (N) (graphene).</li>
     
-      <li>Current flows on the left only from the injector (I) at \( x = 0 \) into (N)</li>
+      <li>Current flows on the left only from the injector (I) at \( x = 0 \) into (N).</li>
     
-      <li>Spin current diffuses to the detector (D) at \( x = L \)</li>
+      <li>Spin current diffuses to the detector (D) at \( x = L \).</li>
     
-      <li>Measured voltage is proportional to the spin chemical potential at (D)</li>
+      <li>Measured voltage is proportional to the spin chemical potential at (D).</li>
     
       <li>Modeled by diffusion equation.</li>
     
-      <li>Include effects on contacts with \( J_{↑↓}^C \)</li>
+      <li>Include effects on contacts with \( J_{↑↓}^C \).</li>
     
-      <li>Solve by assuming appropriate continuity conditions on current and spin current at (I) and (D)</li>
+      <li>Solve by assuming appropriate continuity conditions on current and spin current at (I) and (D).</li>
     
-      <li>Applied transverse magnetic field causes spins to precess as they diffuse</li>
+      <li>Applied transverse magnetic field causes spins to precess as they diffuse.</li>
     
     </ul>
   </section>
@@ -215,15 +223,37 @@
     data-remodal-options='{"hashTracking": false}' style="display:none;">
     <ul>
     
-      <li>Nonlocal resistance is the voltage normalized by the injected current</li>
+      <li>Nonlocal resistance is the voltage normalized by the injected current.</li>
     
-      <li>Boundary conditions give linear system, solve to obtain \( μ_s^N \)</li>
+      <li>Boundary conditions give linear system, solve to obtain \( μ_s^N \).</li>
     
-      <li>Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP) to the field</li>
+      <li>Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP) to the field.</li>
     
-      <li>\( P \) is a polarization, \( P ≤ 1 \)</li>
+      <li>\( P \) is a polarization, \( P ≤ 1 \).</li>
     
-      <li>\( R_N \) is effectively the resistance of (N) over the spin diffusion length \( λ \)</li>
+      <li>\( R_N \) is effectively the resistance of (N) over the spin diffusion length \( λ \).</li>
+    
+      <li>\( r \) is a new length scale introduced by the contact resistance and effectively proportional to it.</li>
+    
+    </ul>
+  </section>
+
+  <section class="remodal notes" data-remodal-id="modal-notes-fits"
+    data-remodal-options='{"hashTracking": false}' style="display:none;">
+    <ul>
+    
+      <li>Fit done with Python using least squares.</li>
+    
+    </ul>
+  </section>
+
+  <section class="remodal notes" data-remodal-id="modal-notes-limits"
+    data-remodal-options='{"hashTracking": false}' style="display:none;">
+    <ul>
+    
+      <li>There are a few key limits we considered.</li>
+    
+      <li>Tunneling contacts when \(r ≫ λ \), essentially \( R_C → ∞ \), and all the terms with \( λ / r \) become small. Then, \( f \) reduces to the previously considered case that ignores the contact resistance.</li>
     
     </ul>
   </section>
