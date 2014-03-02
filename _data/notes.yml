@@ -28,3 +28,13 @@
     - \( P \) is a polarization, \( P ≤ 1 \).
     - \( R_N \) is effectively the resistance of (N) over the spin diffusion length \( λ \).
     - \( r \) is a new length scale introduced by the contact resistance and effectively proportional to it.
+
+- id: fits
+  text:
+    - Fit done with Python using least squares.
+
+- id: limits
+  text:
+    - There are a few key limits we considered.
+    - Tunneling contacts when \(r ≫ λ \), essentially \( R_C → ∞ \), and all the terms with \( λ / r \) become small.
+      Then, \( f \) reduces to the previously considered case that ignores the contact resistance.
