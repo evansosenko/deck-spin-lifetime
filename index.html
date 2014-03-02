@@ -8,6 +8,10 @@ ucr_url: http://www.physics.ucr.edu/
 coauthors: [ Vivek Aji ]
 ---
 
+{% capture spin_device %}
+<img class="half-width" src="{% asset_path device.svg %}" alt="Spin injection device" />
+{% endcapture %}
+
 <style>h2::after{content:"{{ page.short_url }}"};</style>
 
 {% slide header %}
@@ -36,10 +40,21 @@ coauthors: [ Vivek Aji ]
   <a class="ucr_logo" href="{{ page.ucr_url }}"></a>
 {% endslide %}
 
+{% slide %}
+  <h2>Outline</h2>
+  <ol class="full">
+    <li>Overview of spin injection experiment and nonlocal resistance</li>
+    <li>Analytic solution including effect of contacts</li>
+    <li>Fitting the solution to real data</li>
+    <li>Limitations of fitting regimes</li>
+  </ol>
+  {{ spin_device }}
+{% endslide %}
+
 {% slide#geometry %}
   <h2>Device geometry</h2>
   <div class="inner">
-    <img class="half-width" src="{% asset_path device.svg %}" alt="Device" />
+    {{ spin_device }}
     <p class="equation large">$$D ∇^2 μ_s - \frac{μ_s}{τ} + ω × μ_s = 0$$</p>
     <p class="equation large">$$V ∝ μ_s^N(x = L)$$</p>
 
@@ -60,7 +75,7 @@ coauthors: [ Vivek Aji ]
     </ul>
   </div>
 
-  {% include note.html id="introduction" %}
+  {% include note.html id="geometry" %}
 {% endslide %}
 
 {% slide#nonlocal_resistance %}

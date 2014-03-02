@@ -8,7 +8,7 @@
 # Create a link to open the notes in a modal using
 #
 # {% include note.html id="unique-note-id" %}
-- id: introduction
+- id: geometry
   text:
     - Spin injection experimental geometry.
     - Ferromagnetic contacts (F) on semiconductor (N) (graphene).
