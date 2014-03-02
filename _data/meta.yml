@@ -1,13 +1,23 @@
 # This meta data should be filled out.
 title: Effect of contacts on spin lifetime measurements in graphene
-description: Effect of contacts on spin lifetime measurements in graphene
-keywords: [deck.js, talk]
+description: Contributed Talk, APS March Meeting March 2014, Denver, CO, US.
+keywords:
+  - spintronics
+  - spin
+  - spin lifetime
+  - graphene
+  - Hanle effect
+  - aps march meeting
+  - 2014
+  - physics
+  - deck.js
+  - talk
 locale: en_US
 site_name: evansosenko.com
 
 # This meta data is optional.
 # determiner: null
-# image: http://razor-x.github.io/jekyll-and-deck.js/preview.png
+image: http://io.evansosenko.com/deck-spin-lifetime/device.png
 # audio: http://razor-x.github.io/jekyll-and-deck.js/talk.mp3
 # video: http://razor-x.github.io/jekyll-and-deck.js/talk.mpg
 # type: website
