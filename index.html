@@ -40,15 +40,25 @@ coauthors: [ Vivek Aji ]
   <a class="ucr_logo" href="{{ page.ucr_url }}"></a>
 {% endslide %}
 
+{% capture outline_content %}
+<h2>Outline</h2>
+<ol class="full">
+  <li>Overview of spin injection experiment and nonlocal resistance</li>
+  <li>Analytic solution including effect of contacts</li>
+  <li>Fitting the solution to real data</li>
+  <li>Limitations of fitting regimes</li>
+</ol>
+{% endcapture %}
+
 {% slide %}
-  <h2>Outline</h2>
-  <ol class="full">
-    <li>Overview of spin injection experiment and nonlocal resistance</li>
-    <li>Analytic solution including effect of contacts</li>
-    <li>Fitting the solution to real data</li>
-    <li>Limitations of fitting regimes</li>
-  </ol>
+  {{ outline_content }}
   {{ spin_device }}
+{% endslide %}
+
+{% slide %}
+  {{ outline_content }}
+  <h3>Familiar integral expression that ignores contact effects</h3>
+  <p class="equation">$$R_{\text{NL}} ∝ \int_0^∞ \frac{1}{\sqrt{4 π D t}} \exp{\left[ - \frac{L^2}{4 π D t} \right]} e^{-t / τ} \cos{ω t} \: dt$$</p>
 {% endslide %}
 
 {% slide#geometry %}
