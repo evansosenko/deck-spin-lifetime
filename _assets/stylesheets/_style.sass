@@ -151,9 +151,14 @@ article.deck-container
 
   .deck-status
     position: absolute
-    bottom: $title-slide-bottom-margin-large
-    width: 100%
-    text-align: center
+    top: $title-slide-bottom-margin-large / 2
+    right: $title-slide-bottom-margin-large
+
+    @media #{$xga}
+      top: initial
+      bottom: $title-slide-bottom-margin-large
+      width: 100%
+      text-align: center
 
   .plot
     margin: auto
