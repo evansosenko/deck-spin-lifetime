@@ -318,8 +318,9 @@ article.deck-container
         display: inline-block
 
   #limits
-    div.top
-      max-width: 20vw
+    @media #{$xga}
+      div.top
+        max-width: 20vw
 
   .slide.fits
     .inset
