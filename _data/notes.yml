@@ -24,14 +24,20 @@
   text:
     - Nonlocal resistance is the voltage normalized by the injected current.
     - Boundary conditions give linear system, solve to obtain \( μ_s^N \).
-    - Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP) to the field.
-    - \( P \) is a polarization, \( P ≤ 1 \).
+    - Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP).
+    - \( P \) is a polarization factor, \( P ≤ 1 \).
+      Depends on resistances and conductivities.
     - \( R_N \) is effectively the resistance of (N) over the spin diffusion length \( λ \).
     - \( r \) is a new length scale introduced by the contact resistance and effectively proportional to it.
+    - Expression reduces to the typical case where contacts are ignored in the limit \( r → ∞ \).
 
 - id: fits
   text:
     - Fit done with Python using least squares.
+    - Tunneling contacts with finite \( r \) give same \( τ \).
+    - This is to be expected since tunneling contacts have high effective resistance.
+    - Transparent contacts with finite \( r \) only changed \( τ \) by a factor of 2.
+    - All fits have Chi-squared much less than unity.
 
 - id: limits
   text:
