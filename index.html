@@ -21,7 +21,7 @@
   <meta property="og:site_name" content="evansosenko.com" />
 
 
-<meta property="og:updated_time" content="2014-03-04T00:24:20+00:00" />
+<meta property="og:updated_time" content="2014-03-04T00:33:51+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -199,11 +199,14 @@
       <ul class="equation">
         <li>\( R_C = 5 × 10^5 \; \text{kΩ} \)</li>
         <li>\( τ = 427 \; \text{ps} \)</li>
+        <li>\( D = 0.014 \; \text{m}^2 / \text{s} \)</li>
+        <li>\( λ = 2.5 \; \text{μm} \)</li>
       </ul>
 
       <h3>Infinite contact resistance (inset)</h3>
       <ul class="equation">
         <li>\( τ = 427 \; \text{ps} \)</li>
+        <li>\( D = 0.014 \; \text{m}^2 / \text{s} \)</li>
       </ul>
     </div>
   </div>
@@ -227,11 +230,15 @@
       <ul class="equation">
         <li>\( R_C = 3 \; \text{kΩ} \)</li>
         <li>\( τ = 130 \; \text{ps} \)</li>
+        <li>\( D = 0.021 \; \text{m}^2 / \text{s} \)</li>
+        <li>\( λ = 1.66 \; \text{μm} \)</li>
       </ul>
 
       <h3>Infinite contact resistance (inset)</h3>
       <ul class="equation">
         <li>\( τ = 78 \; \text{ps} \)</li>
+        <li>\( D = 0.01 \; \text{m}^2 / \text{s} \)</li>
+        <li>\( λ = 1.4 \; \text{μm} \)</li>
       </ul>
     </div>
   </div>
@@ -250,7 +257,9 @@
       <h3>Finite contact resistance</h3>
       <ul class="equation">
         <li>\( R_C = 0.3 \; \text{kΩ} \)</li>
-        <li>\( τ = 8 × 10^6 \; \text{ps} \)</li>
+        <li>\( τ = 800 × 10^4 \; \text{ps} \)</li>
+        <li>\( D = 0.015 \; \text{m}^2 / \text{s} \)</li>
+        <li>\( λ = 350 \; \text{μm} \)</li>
       </ul>
     </div>
   </div>
@@ -328,13 +337,15 @@
     
       <li>Boundary conditions give linear system, solve to obtain \( μ_s^N \).</li>
     
-      <li>Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP) to the field.</li>
+      <li>Sign will change when alignment of the field (as compared to the ferromagnet) changes from parallel (P) to antiparallel (AP).</li>
     
-      <li>\( P \) is a polarization, \( P ≤ 1 \).</li>
+      <li>\( P \) is a polarization factor, \( P ≤ 1 \). Depends on resistances and conductivities.</li>
     
       <li>\( R_N \) is effectively the resistance of (N) over the spin diffusion length \( λ \).</li>
     
       <li>\( r \) is a new length scale introduced by the contact resistance and effectively proportional to it.</li>
+    
+      <li>Expression reduces to the typical case where contacts are ignored in the limit \( r → ∞ \).</li>
     
     </ul>
   </section>
@@ -344,6 +355,14 @@
     <ul>
     
       <li>Fit done with Python using least squares.</li>
+    
+      <li>Tunneling contacts with finite \( r \) give same \( τ \).</li>
+    
+      <li>This is to be expected since tunneling contacts have high effective resistance.</li>
+    
+      <li>Transparent contacts with finite \( r \) only changed \( τ \) by a factor of 2.</li>
+    
+      <li>All fits have Chi-squared much less than unity.</li>
     
     </ul>
   </section>
