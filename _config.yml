@@ -94,6 +94,7 @@ google_analytics:
 #     - content/
 
 scholar:
+  source: bower_components/references
   bibliography: spintronics
   style: "https://raw.github.com/citation-style-language/styles/master/american-physics-society.csl"
   reference_tagname: cite

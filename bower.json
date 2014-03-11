@@ -2,6 +2,7 @@
   "name": "Jekyll & Deck",
   "version": "0.0.5",
   "dependencies": {
+    "references": "https://github.com/razor-x/references.git",
     "css-spinners": "1.0.1",
     "remodal ": "0.1.1",
     "firebase": "1.0.2",
