@@ -1,5 +1,10 @@
 # Changelog
 
+### HEAD
+
+- Use parseUri.
+- Added 'use strict'.
+
 ## 0.0.5
 
 - Use HTML over markdown.
