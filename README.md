@@ -2,7 +2,8 @@
 
 **by [Evan Sosenko](http://evansosenko.com/)**
 
-[![Build Status](https://travis-ci.org/razor-x/deck-spin-lifetime.png?branch=master)](https://travis-ci.org/razor-x/deck-spin-lifetime)
+[![Dependency Status](http://img.shields.io/gemnasium/razor-x/deck-spin-lifetime.svg)](https://gemnasium.com/razor-x/deck-spin-lifetime)
+[![Build Status](http://img.shields.io/travis/razor-x/deck-spin-lifetime/master.svg)](https://travis-ci.org/razor-x/deck-spin-lifetime)
 
 [Contributed Talk, APS March Meeting March 2014, Denver, CO, US.](http://meetings.aps.org/Meeting/MAR14/Event/209736)
 
@@ -157,9 +158,10 @@ JavaScript library versions need to be updated in `bower.json` and `_config.yml`
 
 ## License
 
-This code is Copyright 2014 Evan Sosenko,
+The code and content for this deck is Copyright © 2013-2014 Evan Sosenko.
+
 This deck is built with [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js)
-which is licensed under the MIT license.
+which is licensed under the [MIT license](./MIT-LICENSE.txt).
 
 ## Warranty
 
