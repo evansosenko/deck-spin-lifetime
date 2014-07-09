@@ -2,8 +2,9 @@
 
 **by [Evan Sosenko](http://evansosenko.com/)**
 
-[![Dependency Status](http://img.shields.io/gemnasium/razor-x/deck-spin-lifetime.svg)](https://gemnasium.com/razor-x/deck-spin-lifetime)
-[![Build Status](http://img.shields.io/travis/razor-x/deck-spin-lifetime/master.svg)](https://travis-ci.org/razor-x/deck-spin-lifetime)
+[![All rights reserved](http://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
+[![Dependency Status](http://img.shields.io/gemnasium/razor-x/deck-spin-lifetime.svg?style=flat)](https://gemnasium.com/razor-x/deck-spin-lifetime)
+[![Build Status](http://img.shields.io/travis/razor-x/deck-spin-lifetime/master.svg?style=flat)](https://travis-ci.org/razor-x/deck-spin-lifetime)
 
 [Contributed Talk, APS March Meeting March 2014, Denver, CO, US.](http://meetings.aps.org/Meeting/MAR14/Event/209736)
 
