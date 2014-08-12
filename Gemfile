@@ -13,7 +13,7 @@ gem 'jekyll-assets', '~> 0.9.2'
 gem 'sass', '~> 3.3.2'
 gem 'uglifier', '~> 2.5.0'
 gem 'coffee-script', '~> 2.3.0'
-gem 'bourbon', '~> 3.1.8'
+gem 'bourbon', '~> 4.0.2'
 
 # Additional Jekyll plugins
 gem 'jekyll-scholar', '~> 4.0.0'
