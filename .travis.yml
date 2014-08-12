@@ -1,3 +1,4 @@
+---
 language: [ ruby, node_js ]
 rvm: [ 2.1.1 ]
 node_js: [ 0.10 ]
@@ -6,20 +7,23 @@ before_script:
   - npm install bower -g
   - bower install
 
+before_install:
+  - 'echo ''gem: --no-document'' > ~/.gemrc'
+
 install:
   - bundle update
 
 script: bundle exec rake travis
 
-# set the branch that will be built and published to GitHub pages
+# Set the branch that will be built and published to GitHub pages.
 branches:
   only:
     - master
 
-# create a GitHub Personal Access Token
-# install the travis gem
-# and run the command below (fill in your name, email, and token)
+# Create a GitHub Personal Access Token.
+# Install the travis gem.
+# Run the command below (fill in your name, email, and token):
 # $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
-# replace the value of secure with your generated value
+# Replace the value of secure with your generated value.
 env:
   - secure: "ElbEVAs5GH+U8MiYmN6cIY2L2/ZIPJv43DrxqlmNFQOFd6kjI8tkKgK7sYN4wBxfy+WT3r2ynIwfMi6t+MXRosYh4JmkeZopaxem6volbZHdz6pWRGraj/8plGOKWHIxwaAo+Id63DjhxXOaB+7RpVtAXvVFlMEQr5y/2LItDIE="
