@@ -18,9 +18,9 @@ site_name: evansosenko.com
 
 # This meta data is optional.
 # determiner: null
-image: http://io.evansosenko.com/deck-spin-lifetime/device.png
-# audio: http://razor-x.github.io/jekyll-and-deck.js/talk.mp3
-# video: http://razor-x.github.io/jekyll-and-deck.js/talk.mpg
+image: https://io.evansosenko.com/deck-spin-lifetime/device.png
+# audio: https://razor-x.github.io/jekyll-and-deck.js/talk.mp3
+# video: https://razor-x.github.io/jekyll-and-deck.js/talk.mpg
 # type: website
 #
 twitter:
