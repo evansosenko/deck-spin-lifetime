@@ -9,9 +9,9 @@
 [Contributed Talk, APS March Meeting March 2014, Denver, CO, US.](http://meetings.aps.org/Meeting/MAR14/Event/209736)
 
 See this and other talks at
-[evansosenko.com](http://evansosenko.com/).
+[evansosenko.com](https://evansosenko.com/).
 
-Source for [my deck](http://io.evansosenko.com/deck-spin-lifetime/) running on Jekyll and deck.js.
+Source for [my deck](https://io.evansosenko.com/deck-spin-lifetime/) running on Jekyll and deck.js.
 
 The rest of this README, except for the License,
 is just cloned from [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js/).
