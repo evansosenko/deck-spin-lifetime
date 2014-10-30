@@ -1,6 +1,6 @@
 # Effect of contacts on spin lifetime measurements in graphene
 
-**by [Evan Sosenko](http://evansosenko.com/)**
+**by [Evan Sosenko](https://evansosenko.com/)**
 
 [![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
 [![Dependency Status](https://img.shields.io/gemnasium/razor-x/deck-spin-lifetime.svg?style=flat)](https://gemnasium.com/razor-x/deck-spin-lifetime)
