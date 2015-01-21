@@ -17,4 +17,4 @@ gem 'coffee-script', '~> 2.3.0'
 gem 'bourbon', '~> 4.0.2'
 
 # Additional Jekyll plugins
-gem 'jekyll-scholar', '~> 4.0.0'
+gem 'jekyll-scholar', '~> 4.3.0'
