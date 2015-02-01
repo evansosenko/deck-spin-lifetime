@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.6
+
+- Update MathJax, Firebase, and Remodal.
+
+## 1.2.5
+
+- Simplify social button code.
+
 ## 1.2.4
 
 - Smooth loading process.

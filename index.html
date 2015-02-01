@@ -245,8 +245,7 @@ coauthors: [ Vivek Aji ]
   </div>
 
   {% if site.social %}
-    {% capture social_buttons %}{% include social-buttons.html %}{% endcapture %}
-    {{ social_buttons | strip_newlines }}
+    {% include social-buttons.html %}
   {% endif %}
 {% endslide %}
 
