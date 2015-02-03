@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.7
+
+- Fix Twitter button width bug.
+
 ## 1.2.6
 
 - Update MathJax, Firebase, and Remodal.
