@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "references": "https://github.com/razor-x/references.git",
+    "references": "razor-x/references",
     "MathJax": "2.5.0",
     "bower-parseuri": "1.2.2",
     "css-spinners": "1.0.2",
