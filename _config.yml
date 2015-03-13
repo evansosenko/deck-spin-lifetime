@@ -25,9 +25,10 @@ livereload:
 
 gems:
   - jekyll-assets
+  - jekyll-assets/bourbon
+  - jekyll-assets/neat
   - sass
   - coffee_script
-  - jekyll-assets/bourbon
   - jekyll/scholar
 
 # Jekyll::AssetsPlugin options.
@@ -41,7 +42,7 @@ assets:
   compress:
     css: sass
     js: uglifier
-  autosize: true
+  autosize: false
 
 # Default html tag to use for slides.
 # Override per slide with {% slide tagname %}

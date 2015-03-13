@@ -3,16 +3,23 @@
 // Add deck styles and transitions from deck.js/themes.
 //= require remodal
 //= require highlightjs/styles/default
-//= require css-spinners/css/spinner/spinner
 //= require deck.js/core/deck.core
 //= require deck.js/themes/transition/fade
+
+@import settings
+@import notes
 
 // Load this when using social buttons.
 <%= '@import social-buttons' if site.config['social'] %>
 
-@import notes
+.firebase-auth
+  position: absolute
+  top: 0.5rem
+  width: 100vw
+  text-align: center
 
-@import "bourbon"
-@import "deck.js/themes/style/reset"
-@import "holo"
-@import "style"
+@import bourbon
+@import neat
+@import deck.js/themes/style/reset
+@import deck.js-material
+@import style

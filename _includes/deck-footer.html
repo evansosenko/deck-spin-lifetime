@@ -1,0 +1,12 @@
+{% assign deck = site.data.deck %}
+
+{% if deck.end %}<h1>{{ deck.end }}</h1>{% endif %}
+
+{% include deck-colophon.html %}
+
+{% if site.social %}
+  {% include social-buttons.html %}
+{% endif %}
+
+{% include deck-qrcode.html %}
+{% include deck-logos.html %}

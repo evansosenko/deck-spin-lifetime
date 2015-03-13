@@ -1,0 +1,7 @@
+{% assign deck = site.data.deck %}
+
+{% if deck.title %}<h1>{{ deck.title }}</h1>{% endif %}
+
+{% include deck-authors.html %}
+{% include deck-qrcode.html %}
+{% include deck-logos.html %}

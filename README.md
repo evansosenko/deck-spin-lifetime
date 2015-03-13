@@ -1,10 +1,10 @@
 # Effect of contacts on spin lifetime measurements in graphene
 
-**by [Evan Sosenko](https://evansosenko.com/)**
+[![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-red.svg)](./LICENSE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/deck-spin-lifetime.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
+[![Build Status](https://img.shields.io/travis/razor-x/deck-spin-lifetime.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
 
-[![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/razor-x/deck-spin-lifetime.svg?style=flat)](https://gemnasium.com/razor-x/deck-spin-lifetime)
-[![Build Status](https://img.shields.io/travis/razor-x/deck-spin-lifetime/master.svg?style=flat)](https://travis-ci.org/razor-x/deck-spin-lifetime)
+**by [Evan Sosenko](https://evansosenko.com/)**
 
 [Contributed Talk, APS March Meeting March 2014, Denver, CO, US.](http://meetings.aps.org/Meeting/MAR14/Event/209736)
 
@@ -13,8 +13,8 @@ See this and other talks at
 
 Source for [my deck](https://io.evansosenko.com/deck-spin-lifetime/) running on Jekyll and deck.js.
 
-The rest of this README, except for the License,
-is just cloned from [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js/).
+Source for your deck running on Jekyll and deck.js.
+Just clone and deck.
 
 Demo at [io.evansosenko.com/jekyll-and-deck.js/](https://io.evansosenko.com/jekyll-and-deck.js/).
 
@@ -32,6 +32,7 @@ If you like this, check out the sister project
   * [LiveReload](http://livereload.com/) support. Just run `guard`.
   * Use [Firebase](https://www.firebase.com/) to set up a remote control for your deck.
   * Slide notes using [Remodal](http://vodkabears.github.io/remodal/).
+  * Includes the custom material theme: a clean responsive style to help bootstrap your deck.
 
 ### Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 
@@ -168,7 +169,7 @@ JavaScript library versions need to be updated in `bower.json` and `_config.yml`
 
 ## License
 
-The code and content for this deck is Copyright © 2013-2014 Evan Sosenko.
+The code and content for this deck is Copyright © 2013-2015 Evan Sosenko.
 
 This deck is built with [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js)
 which is licensed under the [MIT license](./MIT-LICENSE.txt).

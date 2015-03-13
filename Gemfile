@@ -9,11 +9,12 @@ gem 'rubyzip', '~> 1.1.0'
 gem 'jekyll', '~> 2.5.2'
 
 # Jekyll::AssetsPlugin and dependencies
-gem 'jekyll-assets', '~> 0.13.0'
+gem 'jekyll-assets', '~> 0.14.0'
 gem 'sass', '~> 3.4.3'
 gem 'uglifier', '~> 2.7.0'
 gem 'coffee-script', '~> 2.3.0'
-gem 'bourbon', '~> 4.0.2'
+gem 'bourbon', '~> 4.2.0'
+gem 'neat', '~> 1.7.1'
 
 # Additional Jekyll plugins
 gem 'jekyll-scholar', '~> 4.3.0'
