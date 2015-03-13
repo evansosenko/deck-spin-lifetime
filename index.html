@@ -4,13 +4,8 @@ layout: deck
 
 {% assign deck = site.data.deck %}
 
-{% capture spin_device %}
-<img class="half-width" src="{% asset_path device.svg %}" alt="Spin injection device" />
-{% endcapture %}
-
 {% capture outline_content %}
-<h2>Outline</h2>
-<ol class="full">
+<ol class="large full omega">
   <li>Overview of spin injection experiment and nonlocal resistance</li>
   <li>Analytic solution including effect of contacts</li>
   <li>Fitting the solution to real data</li>
@@ -18,181 +13,179 @@ layout: deck
 </ol>
 {% endcapture %}
 
-{% slide %}
+{% slide : Outline %}
   {{ outline_content }}
-  {{ spin_device }}
+  {% image device.svg class="two-thirds center" %}
 {% endslide %}
 
-{% slide %}
+{% slide : Outline %}
   {{ outline_content }}
   <h3>Familiar integral expression that ignores contact effects</h3>
-  <p class="equation">$$R_{\text{NL}} ∝ \int_0^∞ \frac{1}{\sqrt{4 π D t}} \exp{\left[ - \frac{L^2}{4 D t} \right]} e^{-t / τ} \cos{ω t} \: dt$$</p>
+  <p class="large">$$R_{\text{NL}} ∝ \int_0^∞ \frac{1}{\sqrt{4 π D t}} \exp{\left[ - \frac{L^2}{4 D t} \right]} e^{-t / τ} \cos{ω t} \: dt$$</p>
 {% endslide %}
 
-{% slide#geometry %}
-  <h2>Device geometry</h2>
-  <div class="inner">
-    {{ spin_device }}
-    <p class="equation large">$$D ∇^2 μ_s - \frac{μ_s}{τ} + ω × μ_s = 0$$</p>
-    <p class="equation large">$$V ∝ μ_s^N(x = L)$$</p>
+{% slide#geometry : Device geometry %}
+  {% image device.svg  %}
 
-    <ul class="equation left top">
-      <li>\( L \) : contact spacing</li>
-      <li>\( D \) : diffusion constant</li>
-      <li>\( τ \) : spin lifetime</li>
-      <li>\( λ = \sqrt{D τ} \)</li>
-      <li>\( ω = g μ_B B / ħ \)</li>
-    </ul>
+  <ul class="equation small first">
+    <li>\( L \) : contact spacing</li>
+    <li>\( D \) : diffusion constant</li>
+    <li>\( τ \) : spin lifetime</li>
+    <li>\( λ = \sqrt{D τ} \)</li>
+    <li>\( ω = g μ_B B / ħ \)</li>
+  </ul>
 
-    <ul class="equation right top">
-      <li>\( μ_s = \frac{1}{2} \left( μ_↑ - μ_↓ \right) \)</li>
-      <li>\( J_{↑↓} = σ_{↑↓} ∇μ_{↑↓} \)</li>
-      <li>\( J_{↑↓}^C = Σ_{↑↓} \left( μ^N_{↑↓} - μ^F_{↑↓} \right)_c \)</li>
-      <li>\( J = J_↑ + J_↓ \)</li>
-      <li>\( J_s = J_↑ - J_↓ \)</li>
-    </ul>
+  <ul class="equation small last">
+    <li>\( μ_s = \frac{1}{2} \left( μ_↑ - μ_↓ \right) \)</li>
+    <li>\( J_{↑↓} = σ_{↑↓} ∇μ_{↑↓} \)</li>
+    <li>\( J_{↑↓}^C = Σ_{↑↓} \left( μ^N_{↑↓} - μ^F_{↑↓} \right)_c \)</li>
+    <li>\( J = J_↑ + J_↓ \)</li>
+    <li>\( J_s = J_↑ - J_↓ \)</li>
+  </ul>
+
+  <div class="full omega">
+    <p class="large">$$D ∇^2 μ_s - \frac{μ_s}{τ} + ω × μ_s = 0$$</p>
+    <p class="large">$$V ∝ μ_s^N(x = L)$$</p>
   </div>
 
-  <p>{% reference ActaPhysicaSlovaca.57.4_5.565-907 %}</p>
-  <p>{% reference PhysRevB.37.5312 %} {% reference PhysRevB.67.052409 %}</p>
-  <p>{% reference PhysRevB.80.214427 %}</p>
+  <p class="indent full omega">
+    {% reference ActaPhysicaSlovaca.57.4_5.565-907 %}<br />
+    {% reference PhysRevB.37.5312 %} {% reference PhysRevB.67.052409 %}<br />
+    {% reference PhysRevB.80.214427 %}
+  </p>
 
   {% include note.html id="geometry" %}
 {% endslide %}
 
-{% slide#nonlocal_resistance %}
-  <h2>Nonlocal resistance</h2>
+{% slide : Nonlocal resistance %}
+  <p class="large half">\( R_{\text{NL}}^± = ± V / I = ± P^2 R_N f \)</p>
+  <p class="large half right omega">\( R_N = \frac{λ}{W} \frac{1}{σ_G} = \frac{λ}{L W} \frac{1}{σ^N} \)</p>
 
-  <div class="inner">
-    <p class="equation">\( R_{\text{NL}}^± = ± V / I = ± P^2 R_N f \)</p>
-    <p class="equation right top">\( R_N = \frac{λ}{W} \frac{1}{σ_G} = \frac{λ}{L W} \frac{1}{σ^N} \)</p>
+  {% slide div.full.center.omega %}
+    <h3>Solution</h3>
+    <p class="large">$$f = \operatorname{Re}{ \left\{ \left[ 2 \left( \sqrt{1 + i ω τ} + λ / r \right) e^{\left( L / λ \right) \sqrt{1 + i ω τ}} \\ + \frac{\left( λ / r \right)^2}{\sqrt{1 + i ω τ}} \sinh{\left( L / λ \right) \sqrt{1 + i ω τ}} \right]^{-1} \right\} }$$</p>
+  {% endslide %}
 
-    {% slide div.center %}
-      <h3>Solution</h3>
-      <p class="equation">$$f = \operatorname{Re}{ \left\{ \left[ 2 \left( \sqrt{1 + i ω τ} + λ / r \right) e^{\left( L / λ \right) \sqrt{1 + i ω τ}} \\ + \frac{\left( λ / r \right)^2}{\sqrt{1 + i ω τ}} \sinh{\left( L / λ \right) \sqrt{1 + i ω τ}} \right]^{-1} \right\} }$$</p>
-    {% endslide %}
+  {% slide div.full.center.omega %}
+    <h3>Only scales that appear in \( f \)</h3>
+    <ul class="equation inline">
+      <li>\( L / λ \)</li>
+      <li>\( λ / r \)</li>
+      <li>\( ω τ \)</li>
+    </ul>
+  {% endslide %}
 
-    {% slide div.center %}
-      <h3>Only scales that appear in \( f \)</h3>
-      <ul class="equation inline">
-        <li>\( L / λ \)</li>
-        <li>\( λ / r \)</li>
-        <li>\( ω τ \)</li>
-      </ul>
-    {% endslide %}
-  </div>
   {% include note.html id="nonlocal_resistance" %}
 {% endslide %}
 
-{% slide.fits %}
-  <h2>Tunneling contacts</h2>
-  <div class="inner">
-    <div class="inner plot half-width">
-      <img class="half-width" src="{% asset_path plots/fig_4b_parallel.svg %}"
-        alt="Fit finite contact resistance case to parallel field data from Fig. 4b of PhysRevLett.105.167202." />
-      <img class="top right inset plot" src="{% asset_path plots/fig_4b_transparent_contacts_parallel.svg %}" alt="Fit infinite contact resistance case to parallel field data from Fig. 4b of PhysRevLett.105.167202." />
-    </div>
-    <div class="center">
-      <h3>Finite contact resistance</h3>
-      <ul class="equation">
-        <li>\( R_C = 5 × 10^5 \; \text{kΩ} \)</li>
-        <li>\( τ = 427 \; \text{ps} \)</li>
-        <li>\( D = 0.014 \; \text{m}^2 / \text{s} \)</li>
-        <li>\( λ = 2.5 \; \text{μm} \)</li>
-      </ul>
+{% slide : Tunneling contacts %}
+  <figure class="inset-container two-thirds">
+    {% image plots/fig_4b_parallel.svg %}
+    {% image plots/fig_4b_transparent_contacts_parallel.svg class="inset" %}
+    <figcaption>Fit finite contact resistance case to parallel field data from Fig. 4b of W. Han, et al.
+    Inset: infinite contact resistance case.</figcaption>
+  </figure>
 
-      <h3>Infinite contact resistance (inset)</h3>
-      <ul class="equation">
-        <li>\( τ = 427 \; \text{ps} \)</li>
-        <li>\( D = 0.014 \; \text{m}^2 / \text{s} \)</li>
-      </ul>
-    </div>
+  <div class="one-third omega">
+    <h3>Finite contact resistance</h3>
+    <ul class="equation">
+      <li>\( R_C = 5 × 10^5 \; \text{kΩ} \)</li>
+      <li>\( τ = 427 \; \text{ps} \)</li>
+      <li>\( D = 0.014 \; \text{m}^2 / \text{s} \)</li>
+      <li>\( λ = 2.5 \; \text{μm} \)</li>
+    </ul>
+
+    <h3>Infinite contact resistance</h3>
+    <ul class="equation">
+      <li>\( τ = 427 \; \text{ps} \)</li>
+      <li>\( D = 0.014 \; \text{m}^2 / \text{s} \)</li>
+    </ul>
   </div>
-  <p class="reference">{% reference PhysRevLett.105.167202 %}</p>
+
+  <p class="indent full omega">{% reference PhysRevLett.105.167202 %}</p>
+
   {% include note.html id="fits" %}
 {% endslide %}
 
-{% slide.fits %}
-  <h2>Transparent contacts</h2>
-  <div class="inner">
-    <div class="inner plot half-width">
-      <img class="half-width" src="{% asset_path plots/fig_4d_difference.svg %}"
-        alt="Fit finite contact resistance case to difference (|P - AP|) field data from Fig. 4d of PhysRevLett.105.167202" />
-      <img class="top right inset plot" src="{% asset_path plots/fig_4d_transparent_contacts_difference.svg %}"
-        alt="Fit infinite contact resistance case to difference (|P - AP|) field data from Fig. 4d of PhysRevLett.105.167202" />
-    </div>
-    <div class="center">
-      <h3>Finite contact resistance</h3>
-      <ul class="equation">
-        <li>\( R_C = 3 \; \text{kΩ} \)</li>
-        <li>\( τ = 130 \; \text{ps} \)</li>
-        <li>\( D = 0.021 \; \text{m}^2 / \text{s} \)</li>
-        <li>\( λ = 1.66 \; \text{μm} \)</li>
-      </ul>
+{% slide : Transparent contact %}
+  <figure class="inset-container two-thirds">
+    {% image plots/fig_4d_difference.svg %}
+    {% image plots/fig_4d_transparent_contacts_difference.svg class="inset" %}
+    <figcaption>Fit finite contact resistance case to difference \( |R_\text{NL}^+ - R_\text{NL}^-| \) field data from Fig. 4d of W. Han, et al.
+    Inset: infinite contact resistance case.</figcaption>
+  </figure>
 
-      <h3>Infinite contact resistance (inset)</h3>
-      <ul class="equation">
-        <li>\( τ = 78 \; \text{ps} \)</li>
-        <li>\( D = 0.01 \; \text{m}^2 / \text{s} \)</li>
-        <li>\( λ = 1.4 \; \text{μm} \)</li>
-      </ul>
-    </div>
+  <div class="one-third omega">
+    <h3>Finite contact resistance</h3>
+    <ul class="equation">
+      <li>\( R_C = 3 \; \text{kΩ} \)</li>
+      <li>\( τ = 130 \; \text{ps} \)</li>
+      <li>\( D = 0.021 \; \text{m}^2 / \text{s} \)</li>
+      <li>\( λ = 1.66 \; \text{μm} \)</li>
+    </ul>
+
+    <h3>Infinite contact resistance</h3>
+    <ul class="equation">
+      <li>\( τ = 78 \; \text{ps} \)</li>
+      <li>\( D = 0.01 \; \text{m}^2 / \text{s} \)</li>
+      <li>\( λ = 1.4 \; \text{μm} \)</li>
+    </ul>
   </div>
-  <p class="reference">{% reference PhysRevLett.105.167202 %}</p>
+
+  <p class="indent full omega">{% reference PhysRevLett.105.167202 %}</p>
+
   {% include note.html id="fits" %}
 {% endslide %}
 
-{% slide.fits %}
-  <h2>Transparent contacts</h2>
-  <div class="inner">
-    <img class="inner plot half-width" src="{% asset_path plots/fig_4d_normalized_difference.svg %}"
-      alt="Fit finite contact resistance case to normalized difference (|P - AP|) field data from Fig. 4d of PhysRevLett.105.167202" />
-    <div class="center">
-      <h3>Finite contact resistance</h3>
-      <ul class="equation">
-        <li>\( R_C = 0.3 \; \text{kΩ} \)</li>
-        <li>\( τ = 800 × 10^4 \; \text{ps} \)</li>
-        <li>\( D = 0.015 \; \text{m}^2 / \text{s} \)</li>
-        <li>\( λ = 350 \; \text{μm} \)</li>
-      </ul>
-    </div>
+{% slide : Transparent contacts %}
+  <figure class="two-thirds">
+    {% image plots/fig_4d_normalized_difference.svg %}
+    <figcaption>Fit finite contact resistance case to normalized difference \( |R_\text{NL}^+ - R_\text{NL}^-| \) field data from Fig. 4d of W. Han, et al.</figcaption>
+  </figure>
+
+  <div class="one-third omega">
+    <h3>Finite contact resistance</h3>
+    <ul class="equation">
+      <li>\( R_C = 0.3 \; \text{kΩ} \)</li>
+      <li>\( τ = 800 × 10^4 \; \text{ps} \)</li>
+      <li>\( D = 0.015 \; \text{m}^2 / \text{s} \)</li>
+      <li>\( λ = 350 \; \text{μm} \)</li>
+    </ul>
   </div>
-  <p class="reference">{% reference PhysRevLett.105.167202 %}</p>
+
+  <p class="indent full omega">{% reference PhysRevLett.105.167202 %}</p>
+
   {% include note.html id="fits" %}
 {% endslide %}
 
-{% slide#limits %}
-  <h2>Limits</h2>
-  <div class="inner center">
-    <img class="plot half-width" src="{% asset_path plots/PhysRevB.86.235408.fig.3.svg %}" alt="Fig. 3 from PhysRevB.86.235408" />
-    <p>{% reference PhysRevB.86.235408 %}</p>
+{% slide : Limits %}
+  <figure class="two-thirds">
+    {% image plots/PhysRevB.86.235408.fig.3.svg %}
+    <figcaption>Fig. 3 from T. Maassen, et al.</figcaption>
+  </figure>
 
-    <div class="top left">
-      <ul class="equation">
-        <li>\( ω τ ≫ 1 \)</li>
-        <li>\( λ / r &gt;1 \)</li>
-        <li>Zeros set by \( D \) only.</li>
-        <li>Normalized case scales as \( f / f_0 ∝ \frac{(λ / r)^2}{\sqrt{ω τ}} \).</li>
-        <li>Can fit to increased \( τ \) with moderate decrease in \( r \).</li>
-      </ul>
-    </div>
+  <div class="one-third omega">
+    <ul class="equation">
+      <li>❱ \( r → ∞ \) or \( λ / r ≪ 1 \)</li>
+      <li>\( r \) terms are negligible.</li>
+      <li>Scale and zeros set by \( τ \) and \( D \).</li>
+    </ul>
 
-    <div class="top right">
-      <ul class="equation">
-        <li>\( r → ∞ \) or λ / r ≪ 1</li>
-        <li>\( r \) terms are negligible.</li>
-        <li>Scale and zeros set by \( τ \) and \( D \).</li>
-      </ul>
-    </div>
+    <ul class="equation">
+      <li>❱ \( ω τ ≫ 1 \) &amp; \( λ / r &gt;1 \)</li>
+      <li>Zeros set by \( D \) only.</li>
+      <li>Normalized case scales as \( f / f_0 ∝ \frac{(λ / r)^2}{\sqrt{ω τ}} \).</li>
+      <li>Can fit to increased \( τ \) with moderate decrease in \( r \).</li>
+    </ul>
   </div>
+
+  <p class="indent full omega">{% reference PhysRevB.86.235408 %}</p>
 
   {% include note.html id="limits" %}
 {% endslide %}
 
-{% slide %}
-  <h2>Conclusion</h2>
-
-  <ol class="full">
+{% slide : Conclusion %}
+  <ol class="large full omega">
     <li>Solve system with finite contact resistance</li>
     <li>Analytic expression for \( R_{\text{NL}} \)</li>
     <li>Fit to real Hanle curve data and obtain reasonable results</li>
