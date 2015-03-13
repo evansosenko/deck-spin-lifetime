@@ -21,7 +21,7 @@ script: bundle exec rake travis
 # Set the branch that will be built and published to GitHub pages.
 branches:
   only:
-    - demo
+    - master
 
 # Create a GitHub Personal Access Token.
 # Install the travis gem.
@@ -29,4 +29,4 @@ branches:
 # $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
 # Replace the value of secure with your generated value.
 env:
-  - secure: "TFEHFIyDWOUmvWbq469CAk4ZZjnSdT1HWYumBnFjE6Fs9671VuTWVrWoevKx2HiZVGOMRHW4CQMBarrcvaR2dV5liIC8nzMQXPp7tQE+gOQuET8SUIqa4h2eDzaNGAXT66HWLajHdw/q1qrLDbm3IQeDy1H0P2AOn6vFZWKe48U="
+  - secure: "j6P5E4MpWomMQxolRVr7ME3axqUptqHFHZt09HFk8rxIhT+B9lhVGcnNMnITww8QBifKlhUt2Hz/+BZwcyKuPO46xUYdS8O1jmJTT3UmDgMmlQsXdmdrdgo7Eb/XvYiXPeBUa3b9BbPOa2Tv3gNkfROBzK1rPSGzo3sO/LSt2+A="

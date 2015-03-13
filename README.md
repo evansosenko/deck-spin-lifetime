@@ -1,8 +1,17 @@
-# Jekyll & deck.js
+# Effect of contacts on spin lifetime measurements in graphene
 
-[![MIT License](https://img.shields.io/badge/license-MIT-red.svg)](./LICENSE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/razor-x/jekyll-and-deck.js.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
-[![Build Status](https://img.shields.io/travis/razor-x/jekyll-and-deck.js/demo.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+[![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-red.svg)](./LICENSE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/deck-spin-lifetime.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
+[![Build Status](https://img.shields.io/travis/razor-x/deck-spin-lifetime.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+
+**by [Evan Sosenko](https://evansosenko.com/)**
+
+[Contributed Talk, APS March Meeting March 2014, Denver, CO, US.](http://meetings.aps.org/Meeting/MAR14/Event/209736)
+
+See this and other talks at
+[evansosenko.com](https://evansosenko.com/).
+
+Source for [my deck](https://io.evansosenko.com/deck-spin-lifetime/) running on Jekyll and deck.js.
 
 Source for your deck running on Jekyll and deck.js.
 Just clone and deck.
@@ -160,7 +169,10 @@ JavaScript library versions need to be updated in `bower.json` and `_config.yml`
 
 ## License
 
-This code is licensed under the MIT license.
+The code and content for this deck is Copyright © 2013-2015 Evan Sosenko.
+
+This deck is built with [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js)
+which is licensed under the [MIT license](./MIT-LICENSE.txt).
 
 ## Warranty
 

@@ -1,8 +1,11 @@
 ---
 # Jekyll options.
-domain: https://razor-x.github.io/jekyll-and-deck.js
-baseurl: https://razor-x.github.io/jekyll-and-deck.js
+domain: https://io.evansosenko.com/deck-spin-lifetime
+baseurl: https://io.evansosenko.com/deck-spin-lifetime
 markdown: redcarpet
+redcarpet:
+  extensions:
+    - no_intra_emphasis
 highlighter: pygments
 exclude:
   - CHANGELOG.md
@@ -26,10 +29,11 @@ gems:
   - jekyll-assets/neat
   - sass
   - coffee_script
+  - jekyll/scholar
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: https://razor-x.github.io/jekyll-and-deck.js/assets/
+  baseurl: https://io.evansosenko.com/deck-spin-lifetime/assets/
   sources:
     - _assets/images
     - _assets/javascripts
@@ -45,7 +49,7 @@ assets:
 slide_tag: section
 
 # Set to true to load MathJax.
-mathjax: false
+mathjax: true
 
 # Use a CDN to load some libraries.
 # Libraries are loaded first, asynchronously,
@@ -57,12 +61,12 @@ cdn:
     - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
 
 # Uncomment below to use Firebase as a deck remote.
-firebase: https://jekyll-and-deck-js.firebaseio.com/
+firebase: https://deck-spin-lifetime.firebaseio.com/
 
 # Uncomment below and add your Tracking ID and URL to enable Google Analytics.
-# google_analytics:
-#   id: UA-00000000-0
-#   url: example.com
+google_analytics:
+  id: UA-19631381-4
+  url: evansosenko.com
 
 # Uncomment below and add your Piwik URL to enable Piwik.
 # piwik: https://example.com/piwik/
@@ -96,3 +100,9 @@ firebase: https://jekyll-and-deck-js.firebaseio.com/
 #   # remote content will not be removed from these files and folders
 #   :upload_only:
 #     - content/
+
+scholar:
+  source: bower_components/references
+  bibliography: spintronics
+  style: "https://raw.github.com/citation-style-language/styles/master/american-physics-society.csl"
+  reference_tagname: cite
