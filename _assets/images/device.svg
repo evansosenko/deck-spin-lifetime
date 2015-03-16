@@ -4,12 +4,12 @@
 	 viewBox="0 0 259.637 123.676" enable-background="new 0 0 259.637 123.676" xml:space="preserve">
 <g id="Semiconductor">
 	<g id="Base">
+		<polyline fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			251.722,63.021 251.722,72.167 170.795,116.251 170.795,104.726 		"/>
+		<polyline fill="#FFFFFF" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" points="170.795,104.905 
+			170.795,116.251 22.512,35.282 22.512,26.862 		"/>
 		<polygon fill="#FFFFFF" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
 			170.386,104.868 22.492,26.93 99.365,6.113 251.569,63.034 		"/>
-		<polyline fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			251.722,63.021 251.722,72.167 170.795,116.251 170.795,104.726 		"/>
-		<polyline fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" points="170.795,104.905 170.795,116.251 
-			22.512,35.282 22.512,26.862 		"/>
 	</g>
 	<g id="Perspective_Text_2_">
 		<g>
