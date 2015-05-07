@@ -1,8 +1,8 @@
 # Effect of contacts on spin lifetime measurements in graphene
 
 [![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-red.svg)](./LICENSE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/razor-x/deck-spin-lifetime.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
-[![Build Status](https://img.shields.io/travis/razor-x/deck-spin-lifetime.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+[![Dependency Status](https://img.shields.io/gemnasium/evansosenko/deck-spin-lifetime.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
+[![Build Status](https://img.shields.io/travis/evansosenko/deck-spin-lifetime.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
 
 **by [Evan Sosenko](https://evansosenko.com/)**
 
@@ -11,7 +11,7 @@
 See this and other talks at
 [evansosenko.com](https://evansosenko.com/).
 
-Source for [my deck](https://io.evansosenko.com/deck-spin-lifetime/) running on Jekyll and deck.js.
+Source for [my deck](https://evansosenko.com/deck-spin-lifetime/) running on Jekyll and deck.js.
 
 Source for your deck running on Jekyll and deck.js.
 Just clone and deck.

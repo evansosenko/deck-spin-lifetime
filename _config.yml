@@ -1,7 +1,7 @@
 ---
 # Jekyll options.
-domain: https://io.evansosenko.com/deck-spin-lifetime
-baseurl: https://io.evansosenko.com/deck-spin-lifetime
+domain: https://evansosenko.com/deck-spin-lifetime
+baseurl: https://evansosenko.com/deck-spin-lifetime
 markdown: redcarpet
 redcarpet:
   extensions:
@@ -33,7 +33,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: https://io.evansosenko.com/deck-spin-lifetime/assets/
+  baseurl: https://evansosenko.com/deck-spin-lifetime/assets/
   sources:
     - _assets/images
     - _assets/javascripts

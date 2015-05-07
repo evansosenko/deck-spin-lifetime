@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "references": "razor-x/references",
+    "references": "evansosenko/references",
     "MathJax": "2.5.1",
     "bower-parseuri": "1.2.2",
     "deck.js": "1.1.0",
