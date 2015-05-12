@@ -1,7 +1,7 @@
 ---
 language: [ ruby, node_js ]
-rvm: [ 2.2.1 ]
-node_js: [ 0.12 ]
+rvm: [ 2.2.2 ]
+node_js: [ iojs ]
 cache:
   bundler: true
   directories:
@@ -18,7 +18,7 @@ before_script:
 # Commit the encrypted file and
 # replace the first command below with the generated one.
 before_install:
-  - openssl aes-256-cbc -K $encrypted_826c1abff398_key -iv $encrypted_826c1abff398_iv -in .deploy_key.enc -out .deploy_key -d
+  - openssl aes-256-cbc -K $encrypted_0a09277fcd29_key -iv $encrypted_0a09277fcd29_iv -in .deploy_key.enc -out .deploy_key -d
   - eval "$(ssh-agent)"
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 
@@ -33,4 +33,4 @@ branches:
 # $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
 # Replace the value of secure with your generated value.
 env:
-  - secure: "C4MQK19t0HxBSEJRj2nzdX/Rm2fK11T2ZN4hAUt4+nWmNTRZFtsoJqJ49dWXQkbaVSHMG36nLGok+71arB0JyXgeet2w5fTcpCOdE4/f2NRa0a+Ard1sboQeocslAqIhB8sQVhnKonvuJjlCgH8h8ZyqzfVKesIGHitYMx4s7FU="
+  - secure: "SvznTjTBjf2RaVnren+nZWXu1L1aEr/cty3p7uFBQrhwi5PQMrkJjt5Gn1SD/SmMEKJLHzEwh2FoOpqfr09exGrf/GkpGQ63vfIIbL9tVtNqEzXwd9LmI1OUU4L/Wtj8F15aHVlig3XQmOJTcZ9CmSK/Lwmohcre1UCHPgaWdLc="
