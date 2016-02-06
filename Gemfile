@@ -18,4 +18,4 @@ gem 'bourbon', '~> 4.2.0'
 gem 'neat', '~> 1.7.1'
 
 # Additional Jekyll plugins
-gem 'jekyll-scholar', '~> 4.3.0'
+gem 'jekyll-scholar', '~> 4.5.0'
